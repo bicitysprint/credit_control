@@ -100,4 +100,16 @@ view: aged_debt_view {
     type: count
     drill_fields: [bank_name, name]
   }
+
+  measure: last_updated_date {
+    type: date
+    sql: MAX("RECEIPT_DATE") ;;
+    convert_tz: no
+  }
+
+  measure: receipt_sum {
+    type: sum
+    sql: ${TABLE}."RECEIPT_AMOUNT" ;;
+  }
+
 }
