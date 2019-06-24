@@ -16,6 +16,11 @@ view: aged_debt_view {
     sql: ${TABLE}."CUST_KEY" ;;
   }
 
+  dimension: customer_tier {
+    type: string
+    sql: ${TABLE}."CUSTOMER_TIER" ;;
+  }
+
   dimension: g_desc {
     type: string
     sql: ${TABLE}."G_DESC" ;;
@@ -79,6 +84,11 @@ view: aged_debt_view {
   dimension: pickup_contact {
     type: string
     sql: ${TABLE}."PICKUP_CONTACT" ;;
+  }
+
+  dimension: sales_code_f {
+    type: string
+    sql: ${TABLE}."SALES_CODE_F" ;;
   }
 
   dimension: sales_code_g {
