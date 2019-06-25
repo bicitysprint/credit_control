@@ -41,7 +41,7 @@ view: aged_debt_view {
   ##    icon_url: "https://looker.com/favicon.ico"
   ##  }
     link: {
-      label: "See Commission Detail for {{value}}"
+      label: "See Aged Debt Records for {{value}}"
       url: "/dashboards/229?Full%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
