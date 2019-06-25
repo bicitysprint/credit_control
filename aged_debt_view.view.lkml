@@ -36,6 +36,7 @@ view: aged_debt_view {
     type: string
     drill_fields: [aged_debt_view.h_desc]
     link: {
+      label: "See Aged Debt Records for {{value}}"
       url: "/dashboards/229?Full%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
