@@ -41,7 +41,7 @@ view: aged_debt_view {
   ##  }
     link: {
       label: "See Commission Detail for {{value}}"
-      url: "/dashboards/234?Full%20Name={{value}}"
+      url: "/dashboards/229?Full%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
     sql: ${TABLE}."H_DESC" ;;
