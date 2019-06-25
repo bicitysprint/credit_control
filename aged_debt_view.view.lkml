@@ -31,13 +31,13 @@ view: aged_debt_view {
     sql: ${TABLE}."G_DESC" ;;
   }
 
-  dimension: h_desc {
+  dimension: controllers_name {
     label: "    Controller's Name"
     type: string
     drill_fields: [aged_debt_view.h_desc]
     link: {
       label: "See Aged Debt Records for {{value}}"
-      url: "/dashboards/229?H%20Desc={{value}}"
+      url: "/dashboards/229?Controllers%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
     sql: ${TABLE}."H_DESC" ;;
