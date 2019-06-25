@@ -35,11 +35,11 @@ view: aged_debt_view {
     label: "    Controller's Name"
     type: string
     drill_fields: [aged_debt_view.name]
-  ##  link: {
- ###     label: "See Performance Detail for {{value}}"
-  ##    url: "/dashboards/233?Full%20Name={{value}}"
-  ##    icon_url: "https://looker.com/favicon.ico"
-  ##  }
+    link: {
+      label: "See Performance Detail for {{value}}"
+      url: "/dashboards/233?Full%20Name={{value}}"
+      icon_url: "https://looker.com/favicon.ico"
+    }
     link: {
       label: "See Aged Debt Records for {{value}}"
       url: "/dashboards/229?Full%20Name={{value}}"
