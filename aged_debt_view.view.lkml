@@ -11,6 +11,11 @@ view: aged_debt_view {
     sql: ${TABLE}."BANK_NAME" ;;
   }
 
+  dimension: c_desc {
+    type: string
+    sql: ${TABLE}."C_DESC" ;;
+  }
+
   dimension: cust_key {
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
@@ -29,6 +34,16 @@ view: aged_debt_view {
   dimension: h_desc {
     type: string
     sql: ${TABLE}."H_DESC" ;;
+  }
+
+  dimension: invoice_contact_email {
+    type: string
+    sql: ${TABLE}."INVOICE_CONTACT_EMAIL" ;;
+  }
+
+  dimension: invoice_method {
+    type: string
+    sql: ${TABLE}."INVOICE_METHOD" ;;
   }
 
   dimension: latest_receipt_amounts {
@@ -115,4 +130,5 @@ view: aged_debt_view {
     type: sum
     sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
   }
+
 }
