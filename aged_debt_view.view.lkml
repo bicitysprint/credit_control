@@ -34,7 +34,7 @@ view: aged_debt_view {
   dimension: h_desc {
     label: "    Controller's Name"
     type: string
-    drill_fields: [aged_debt_view.name]
+    drill_fields: [aged_debt_view.h_desc]
     link: {
       label: "See Aged Debt Detail for {{value}}"
       url: "/dashboards/233?Full%20Name={{value}}"
