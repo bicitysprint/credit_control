@@ -10,4 +10,12 @@ datagroup: credit_control_project_default_datagroup {
 
 persist_with: credit_control_project_default_datagroup
 
-explore: aged_debt_view {}
+explore: aged_debt_view {
+
+join: payment_receipts {
+  view_label: "Payment Receipts"
+  relationship: one_to_one
+  sql_on: ${payment_receipts.customer_key} = ${aged_debt_view.cust_key} ;;
+}
+
+}
