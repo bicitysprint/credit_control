@@ -2,7 +2,7 @@ view: credit_control_targets {
   sql_table_name: CC.CREDIT_CONTROL_TARGETS ;;
 
   dimension: archive_month {
-    type: number
+    type: string
     sql: ${TABLE}."ARCHIVE_MONTH" ;;
   }
 
