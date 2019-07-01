@@ -18,4 +18,10 @@ join: payment_receipts {
   sql_on: ${payment_receipts.customer_key} = ${aged_debt_view.cust_key} ;;
 }
 
+  join: credit_control_targets {
+    view_label: "Credit Control Targets"
+    relationship: one_to_one
+    sql_on: ${credit_control_targets.customer_key} = ${aged_debt_view.cust_key} ;;
+  }
+
 }
