@@ -60,4 +60,9 @@ view: credit_control_targets {
     type: count
     drill_fields: [controller_name]
   }
+
+  measure: sum  {
+    type: sum
+    sql: ${current}+${p1}+${p2}+${p3}+${p4} ;;
+  }
 }
