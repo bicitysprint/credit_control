@@ -32,25 +32,21 @@ view: credit_control_targets {
   }
 
   dimension: p1 {
-    hidden: yes
     type: number
     sql: ${TABLE}."P1" ;;
   }
 
   dimension: p2 {
-    hidden: yes
     type: number
     sql: ${TABLE}."P2" ;;
   }
 
   dimension: p3 {
-    hidden: yes
     type: number
     sql: ${TABLE}."P3" ;;
   }
 
   dimension: p4 {
-    hidden: yes
     type: number
     sql: ${TABLE}."P4" ;;
   }
