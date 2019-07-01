@@ -41,11 +41,7 @@ view: aged_debt_view {
       icon_url: "https://looker.com/favicon.ico"
     }
 
-    link: {
-      label: "See % of P4 Debt by Controller for {{value}}"
-      url: "/dashboards/232?Controller%20Name={{value}}"
-      icon_url: "https://looker.com/favicon.ico"
-    }
+
     sql: ${TABLE}."H_DESC" ;;
   }
 
