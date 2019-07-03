@@ -1,6 +1,11 @@
 view: aged_debt_view {
   sql_table_name: CC.AGED_DEBT_VIEW ;;
 
+  dimension: account_sc {
+    type: string
+    sql: ${TABLE}."ACCOUNT_SC" ;;
+  }
+
   dimension: bank_account_no {
     type: string
     sql: ${TABLE}."BANK_ACCOUNT_NO" ;;
@@ -26,13 +31,17 @@ view: aged_debt_view {
     sql: ${TABLE}."CUSTOMER_TIER" ;;
   }
 
+  dimension: e_desc {
+    type: string
+    sql: ${TABLE}."E_DESC" ;;
+  }
+
   dimension: g_desc {
     type: string
     sql: ${TABLE}."G_DESC" ;;
   }
 
-  dimension: controller_name {
-    label: "    Controller Name"
+  dimension: h_desc {
     type: string
     drill_fields: [aged_debt_view.h_desc]
     link: {
@@ -40,23 +49,8 @@ view: aged_debt_view {
       url: "/dashboards/229?Controller%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
-
-
     sql: ${TABLE}."H_DESC" ;;
   }
-
-    ##link: {
-    ##  label: "See Aged Debt Detail for {{value}}"
-    ##  url: "/dashboards/233?Full%20Name={{value}}"
-    ##  icon_url: "https://looker.com/favicon.ico"
-    ##}
-    ##link: {
-    ##  label: "See Aged Debt Records for {{value}}"
-    ##  url: "/dashboards/229?Full%20Name={{value}}"
-    ##  icon_url: "https://looker.com/favicon.ico"
-    ##}
-    ##sql: ${TABLE}."H_DESC" ;;
-  ##}
 
   dimension: invoice_contact_email {
     type: string
@@ -93,6 +87,11 @@ view: aged_debt_view {
     sql: ${TABLE}."NAME" ;;
   }
 
+  dimension: office_code {
+    type: string
+    sql: ${TABLE}."OFFICE_CODE" ;;
+  }
+
   dimension: period_amt_1 {
     type: number
     sql: ${TABLE}."PERIOD_AMT_1" ;;
@@ -123,6 +122,76 @@ view: aged_debt_view {
     sql: ${TABLE}."PICKUP_CONTACT" ;;
   }
 
+  dimension: previous_receipt_amounts_1 {
+    type: number
+    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_1" ;;
+  }
+
+  dimension: previous_receipt_amounts_2 {
+    type: number
+    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_2" ;;
+  }
+
+  dimension: previous_receipt_amounts_3 {
+    type: number
+    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_3" ;;
+  }
+
+  dimension_group: previous_receipt_date_1 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_1" ;;
+  }
+
+  dimension_group: previous_receipt_date_2 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_2" ;;
+  }
+
+  dimension_group: previous_receipt_date_3 {
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_3" ;;
+  }
+
+  dimension: region {
+    type: string
+    sql: ${TABLE}."REGION" ;;
+  }
+
+  dimension: sales_code_e {
+    type: string
+    sql: ${TABLE}."SALES_CODE_E" ;;
+  }
+
   dimension: sales_code_f {
     type: string
     sql: ${TABLE}."SALES_CODE_F" ;;
@@ -138,6 +207,11 @@ view: aged_debt_view {
     sql: ${TABLE}."SALES_CODE_H" ;;
   }
 
+  dimension: split {
+    type: string
+    sql: ${TABLE}."SPLIT" ;;
+  }
+
   dimension: unallocated_amt {
     type: number
     sql: ${TABLE}."UNALLOCATED_AMT" ;;
@@ -147,10 +221,4 @@ view: aged_debt_view {
     type: count
     drill_fields: [bank_name, name]
   }
-
-  measure: sum  {
-    type: sum
-    sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
-  }
-
 }
