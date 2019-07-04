@@ -50,6 +50,7 @@ view: aged_debt_view {
       url: "/dashboards/229?Controller%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
+
     sql: ${TABLE}."H_DESC" ;;
   }
 
@@ -61,11 +62,6 @@ view: aged_debt_view {
   dimension: invoice_method {
     type: string
     sql: ${TABLE}."INVOICE_METHOD" ;;
-  }
-
-  dimension: latest_receipt_amounts {
-    type: number
-    sql: ${TABLE}."LATEST_RECEIPT_AMOUNTS" ;;
   }
 
   dimension_group: latest_receipt {
@@ -123,66 +119,6 @@ view: aged_debt_view {
     sql: ${TABLE}."PICKUP_CONTACT" ;;
   }
 
-  dimension: previous_receipt_amounts_1 {
-    type: number
-    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_1" ;;
-  }
-
-  dimension: previous_receipt_amounts_2 {
-    type: number
-    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_2" ;;
-  }
-
-  dimension: previous_receipt_amounts_3 {
-    type: number
-    sql: ${TABLE}."PREVIOUS_RECEIPT_AMOUNTS_3" ;;
-  }
-
-  dimension_group: previous_receipt_date_1 {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_1" ;;
-  }
-
-  dimension_group: previous_receipt_date_2 {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_2" ;;
-  }
-
-  dimension_group: previous_receipt_date_3 {
-    type: time
-    timeframes: [
-      raw,
-      date,
-      week,
-      month,
-      quarter,
-      year
-    ]
-    convert_tz: no
-    datatype: date
-    sql: ${TABLE}."PREVIOUS_RECEIPT_DATE_3" ;;
-  }
-
   dimension: region {
     type: string
     sql: ${TABLE}."REGION" ;;
@@ -213,6 +149,11 @@ view: aged_debt_view {
     sql: ${TABLE}."SPLIT" ;;
   }
 
+  dimension: total_latest_receipt_amount {
+    type: number
+    sql: ${TABLE}."TOTAL_LATEST_RECEIPT_AMOUNT" ;;
+  }
+
   dimension: unallocated_amt {
     type: number
     sql: ${TABLE}."UNALLOCATED_AMT" ;;
@@ -227,5 +168,4 @@ view: aged_debt_view {
     type: sum
     sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
   }
-
 }
