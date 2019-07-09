@@ -14,7 +14,7 @@ explore: aged_debt_view {
 
 join: payment_receipts {
   view_label: "Payment Receipts"
-  relationship: many_to_one
+  relationship: one_to_one
   sql_on: ${payment_receipts.customer_key} = ${aged_debt_view.cust_key} ;;
 }
 
