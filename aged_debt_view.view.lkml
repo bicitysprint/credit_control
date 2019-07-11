@@ -189,6 +189,11 @@ view: aged_debt_view {
     sql: ${unallocated_amt} ;;
   }
 
+  measure: sum_curr {
+    type: sum
+    sql: ${period_amt_curr} ;;
+  }
+
   measure: sum {
     type: sum
     sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
