@@ -164,6 +164,31 @@ view: aged_debt_view {
     drill_fields: [bank_name, name]
   }
 
+  measure: sum_p1 {
+    type: sum
+    sql: ${period_amt_1} ;;
+  }
+
+  measure: sum_p2 {
+    type: sum
+    sql: ${period_amt_2} ;;
+  }
+
+  measure: sum_p3 {
+    type: sum
+    sql: ${period_amt_3} ;;
+  }
+
+  measure: sum_p4 {
+    type: sum
+    sql: ${period_amt_4} ;;
+  }
+
+  measure: sum_un {
+    type: sum
+    sql: ${unallocated_amt} ;;
+  }
+
   measure: sum {
     type: sum
     sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
