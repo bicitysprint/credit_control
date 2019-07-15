@@ -2,7 +2,7 @@ view: credit_control_targets {
   sql_table_name: CC.CREDIT_CONTROL_TARGETS ;;
 
   dimension: archive_month {
-    type: string
+    type: number
     sql: ${TABLE}."ARCHIVE_MONTH" ;;
   }
 
@@ -56,14 +56,14 @@ view: credit_control_targets {
     sql: ${TABLE}."Staff_Sales_Code" ;;
   }
 
+  dimension: unallocated_amount {
+    type: number
+    sql: ${TABLE}."Unallocated_Amount" ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [controller_name]
-  }
-
-  measure: sum  {
-    type: sum
-    sql: ${current}+${p1}+${p2}+${p3}+${p4} ;;
   }
 
   measure: sum_p1 {
@@ -90,5 +90,11 @@ view: credit_control_targets {
     type: sum
     sql: ${current} ;;
   }
+
+  measure: sum {
+    type: sum
+    sql: ${current}+${p1}+${p2}+${p3}+${p4} ;;
+  }
+
 
 }
