@@ -91,10 +91,14 @@ view: credit_control_targets {
     sql: ${current} ;;
   }
 
-  measure: sum {
+  measure: sum_un {
     type: sum
-    sql: ${current}+${p1}+${p2}+${p3}+${p4} ;;
+    sql: ${unallocated_amount} ;;
   }
 
+  measure: sum {
+    type: sum
+    sql: ${current}+${p1}+${p2}+${p3}+${p4}+${unallocated_amount}  ;;
+  }
 
 }
