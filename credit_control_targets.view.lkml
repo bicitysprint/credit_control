@@ -65,4 +65,30 @@ view: credit_control_targets {
     type: sum
     sql: ${current}+${p1}+${p2}+${p3}+${p4} ;;
   }
+
+  measure: sum_p1 {
+    type: sum
+    sql: ${p1} ;;
+  }
+
+  measure: sum_p2 {
+    type: sum
+    sql: ${p2} ;;
+  }
+
+  measure: sum_p3 {
+    type: sum
+    sql: ${p3} ;;
+  }
+
+  measure: sum_p4 {
+    type: sum
+    sql: ${p4} ;;
+  }
+
+  measure: sum_curr {
+    type: sum
+    sql: ${current} ;;
+  }
+
 }
