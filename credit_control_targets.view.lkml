@@ -66,6 +66,11 @@ view: credit_control_targets {
     drill_fields: [controller_name]
   }
 
+  measure: count_of_p1 {
+    type: count
+    drill_fields: [p1]
+  }
+
   measure: sum_p1 {
     type: sum
     sql: ${p1} ;;

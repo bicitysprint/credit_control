@@ -164,12 +164,7 @@ view: aged_debt_view {
     drill_fields: [bank_name, name]
   }
 
-  measure: count_of_p1 {
-    type: count
-    drill_fields: [period_amt_1]
-  }
-
-  measure: sum_p1 {
+    measure: sum_p1 {
     type: sum
     sql: ${period_amt_1} ;;
   }
