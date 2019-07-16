@@ -71,6 +71,21 @@ view: credit_control_targets {
     drill_fields: [p1]
   }
 
+  measure: count_of_p2 {
+    type: count
+    drill_fields: [p2]
+  }
+
+  measure: count_of_p3 {
+    type: count
+    drill_fields: [p3]
+  }
+
+  measure: count_of_p4 {
+    type: count
+    drill_fields: [p4]
+  }
+
   measure: sum_p1 {
     type: sum
     sql: ${p1} ;;
