@@ -22,6 +22,7 @@ view: aged_debt_view {
   }
 
   dimension: cust_key {
+    primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
   }
