@@ -14,7 +14,7 @@ view: credit_control_targets {
   dimension: controller_name {
     type: string
     sql:case
-    when ${TABLE}."Controller Name" = 'Customer DD Accounts' or "Controller Name" = 'Customer DD Accs' then 'Customer DD Accounts'
+    when ${TABLE}."Controller Name" = 'CUSTOMER DD ACCOUNTS' or "Controller Name" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
     when ${TABLE}."Controller Name" = 'Gail Hameed' or "Controller Name" = 'Gail Hameed.' then 'Gail Hameed'
     when ${TABLE}."Controller Name" = 'Glyn Cobb' or "Controller Name" = 'Glyn Cobb.' then 'Glyn Cobb'
     else ${TABLE}."Controller Name"
