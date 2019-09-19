@@ -19,7 +19,6 @@ view: credit_control_targets {
     when ${TABLE}."Controller_Name" = 'Glyn Cobb' or "Controller_Name" = 'Glyn Cobb.' then 'Glyn Cobb'
     else ${TABLE}."Controller_Name"
     END ;;
-
   }
 
   dimension: current {
