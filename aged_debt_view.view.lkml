@@ -51,8 +51,12 @@ view: aged_debt_view {
       url: "/dashboards/229?Controller%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
-
-    sql: ${TABLE}."H_DESC" ;;
+    sql: case
+    when ${TABLE}."H_DESC" = 'Customer DD Accounts' or "H_DESC" = 'Customer DD Accs' then 'Customer DD Accounts'
+    when ${TABLE}."H_DESC" = 'Gail Hameed' or "H_DESC" = 'Gail Hameed.' then 'Gail Hameed'
+    when ${TABLE}."H_DESC" = 'Glyn Cobb' or "H_DESC" = 'Glyn Cobb.' then 'Glyn Cobb'
+    else ${TABLE}."H_DESC"
+    END ;;
   }
 
   dimension: invoice_contact_email {
