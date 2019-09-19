@@ -45,19 +45,19 @@ view: aged_debt_view {
   dimension: h_desc {
     label: "Credit Controller Name"
     type: string
-    drill_fields: [aged_debt_view.h_desc]
-    link: {
-      label: "See Aged Debt Records for {{value}}"
-      url: "/dashboards/229?Controller%20Name={{value}}"
-      icon_url: "https://looker.com/favicon.ico"
-    }
     sql: case
     when ${TABLE}."H_DESC" = 'Customer DD Accounts' or "H_DESC" = 'Customer DD Accs' then 'Customer DD Accounts'
     when ${TABLE}."H_DESC" = 'Gail Hameed' or "H_DESC" = 'Gail Hameed.' then 'Gail Hameed'
     when ${TABLE}."H_DESC" = 'Glyn Cobb' or "H_DESC" = 'Glyn Cobb.' then 'Glyn Cobb'
     else ${TABLE}."H_DESC"
     END ;;
-  }
+    drill_fields: [aged_debt_view.h_desc]
+    link: {
+      label: "See Aged Debt Records for {{value}}"
+      url: "/dashboards/229?Controller%20Name={{value}}"
+      icon_url: "https://looker.com/favicon.ico"
+    }
+    }
 
   dimension: invoice_contact_email {
     type: string
