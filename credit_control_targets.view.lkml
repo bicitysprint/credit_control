@@ -13,7 +13,13 @@ view: credit_control_targets {
 
   dimension: controller_name {
     type: string
-    sql: ${TABLE}."Controller Name" ;;
+    sql:case
+    when ${TABLE}."Controller_Name" = 'Customer DD Accounts' or "Controller_Name" = 'Customer DD Accs' then 'Customer DD Accounts'
+    when ${TABLE}."Controller_Name" = 'Gail Hameed' or "Controller_Name" = 'Gail Hameed.' then 'Gail Hameed'
+    when ${TABLE}."Controller_Name" = 'Glyn Cobb' or "Controller_Name" = 'Glyn Cobb.' then 'Glyn Cobb'
+    else ${TABLE}."Controller_Name"
+    END ;;
+
   }
 
   dimension: current {
