@@ -99,26 +99,31 @@ view: aged_debt_view {
 
   dimension: period_amt_1 {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_1" ;;
   }
 
   dimension: period_amt_2 {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_2" ;;
   }
 
   dimension: period_amt_3 {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_3" ;;
   }
 
   dimension: period_amt_4 {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_4" ;;
   }
 
   dimension: period_amt_curr {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_CURR" ;;
   }
 
@@ -159,11 +164,13 @@ view: aged_debt_view {
 
   dimension: total_latest_receipt_amount {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."TOTAL_LATEST_RECEIPT_AMOUNT" ;;
   }
 
   dimension: unallocated_amt {
     type: number
+    value_format_name: gbp
     sql: ${TABLE}."UNALLOCATED_AMT" ;;
   }
 
@@ -204,6 +211,7 @@ view: aged_debt_view {
 
   measure: sum {
     type: sum
+    value_format_name: gbp
     sql: ${period_amt_curr}+${period_amt_1}+${period_amt_2}+${period_amt_3}+${period_amt_4}+${unallocated_amt} ;;
   }
 }
