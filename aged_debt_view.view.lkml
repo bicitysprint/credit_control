@@ -39,7 +39,10 @@ view: aged_debt_view {
 
   dimension: g_desc {
     type: string
-    sql: ${TABLE}."G_DESC" ;;
+    sql: case
+    when ${TABLE}."G_DESC" is null then 'NONE ASSIGNED'
+    then ${TABLE}."G_DESC"
+    END ;;
   }
 
   dimension: h_desc {
