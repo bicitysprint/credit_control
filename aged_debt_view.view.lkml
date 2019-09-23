@@ -103,6 +103,13 @@ view: aged_debt_view {
     html: {{rendered_value | date: "%d/%m/%Y" }} ;;
   }
 
+  dimension_group: days_since_last_paid {
+    type: duration
+    intervals: [day]
+    sql_start: ${latest_receipt_date} ;;
+    sql_end: CURRENT_DATE();;
+  }
+
 
   dimension: name {
     type: string
