@@ -168,6 +168,24 @@ view: aged_debt_view {
     sql: ${TABLE}."SPLIT" ;;
   }
 
+  dimension_group: start_date {
+    label: "Account Start Date"
+    type: time
+    timeframes: [
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}."START_DATE"
+  }
+
+
+
   dimension: total_latest_receipt_amount {
     type: number
     value_format_name: gbp
