@@ -184,8 +184,6 @@ view: aged_debt_view {
     sql: ${TABLE}."START_DATE"
   }
 
-
-
   dimension: total_latest_receipt_amount {
     type: number
     value_format_name: gbp
