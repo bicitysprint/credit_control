@@ -21,6 +21,15 @@ view: aged_debt_view {
     sql: ${TABLE}."C_DESC" ;;
   }
 
+  dimension: credit_card_flag {
+    label: "Credit Card Flag (Y/N)"
+    type: string
+    sql: case
+         when ${TABLE}."CREDIT_CARD_FLAG" = 'F' then 'Y'
+         else ${TABLE}."CREDIT_CARD_FLAG"
+         END ;;
+   }
+
   dimension: cust_key {
     primary_key: yes
     type: string
@@ -181,7 +190,7 @@ view: aged_debt_view {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}."START_DATE"
+    sql: ${TABLE}."START_DATE" ;;
   }
 
   dimension: total_latest_receipt_amount {
