@@ -193,6 +193,12 @@ view: aged_debt_view {
     sql: ${TABLE}."START_DATE" ;;
   }
 
+  dimension: account_date_formatted {
+    sql:  ${start_date_date} ;;
+    html: {{rendered_value | date: "%d/%m/%Y" }} ;;
+  }
+
+
   dimension: total_latest_receipt_amount {
     type: number
     value_format_name: gbp
