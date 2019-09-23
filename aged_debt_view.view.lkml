@@ -87,6 +87,12 @@ view: aged_debt_view {
     sql: ${TABLE}."LATEST_RECEIPT_DATE" ;;
   }
 
+  dimension: date_formatted {
+    sql:  ${latest_receipt_date} ;;
+    html: {{rendered_value | date: "%b %d, %y" }} ;;
+  }
+
+
   dimension: name {
     type: string
     sql: ${TABLE}."NAME" ;;
