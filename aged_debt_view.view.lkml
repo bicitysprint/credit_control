@@ -104,7 +104,7 @@ view: aged_debt_view {
   }
 
   dimension_group: days_since_last_paid {
-    label: "Days Since Last Paid"
+    label: "Since Last Paid"
     type: duration
     intervals: [day]
     sql_start: ${latest_receipt_date} ;;
