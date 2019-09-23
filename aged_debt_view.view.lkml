@@ -26,6 +26,7 @@ view: aged_debt_view {
     type: string
     sql: case
          when ${TABLE}."CREDIT_CARD_FLAG" = 'F' then 'Y'
+         when ${TABLE}."CREDIT_CARD_FLAG" IS NULL then 'N'
          else ${TABLE}."CREDIT_CARD_FLAG"
          END ;;
    }
