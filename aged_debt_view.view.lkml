@@ -89,7 +89,7 @@ view: aged_debt_view {
 
   dimension: date_formatted {
     sql:  ${latest_receipt_date} ;;
-    html: {{rendered_value | date: "%b %d, %y" }} ;;
+    html: {{rendered_value | date: "%d/%m/%Y" }} ;;
   }
 
 
