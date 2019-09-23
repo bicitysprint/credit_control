@@ -198,7 +198,6 @@ view: aged_debt_view {
     html: {{rendered_value | date: "%d/%m/%Y" }} ;;
   }
 
-
   dimension: total_latest_receipt_amount {
     type: number
     value_format_name: gbp
