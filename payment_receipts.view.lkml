@@ -283,4 +283,11 @@ view: payment_receipts {
     type: count_distinct
     sql: ${TABLE}.RECEIPT_AMOUNT ;;
   }
+
+  measure: sum {
+    label: "Sum of Receipts"
+    type: sum
+    sql: ${TABLE}.RECEIPT_AMOUNT ;;
+  }
+
 }
