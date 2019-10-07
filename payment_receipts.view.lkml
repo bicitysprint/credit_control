@@ -288,6 +288,7 @@ view: payment_receipts {
     label: "Sum of Receipts"
     type: sum
     sql: ${TABLE}.RECEIPT_AMOUNT ;;
+    value_format_name: gbp
   }
 
 }
