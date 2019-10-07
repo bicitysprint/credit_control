@@ -277,4 +277,10 @@ view: payment_receipts {
     type: count
     drill_fields: [bank_name, branch_name, customer_name]
   }
+
+  measure: count_1 {
+    label: "Count of Receipts"
+    type: count_distinct
+    sql: ${TABLE}.RECEIPT_AMOUNT ;;
+  }
 }
