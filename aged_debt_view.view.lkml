@@ -35,6 +35,7 @@ view: aged_debt_view {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
+    drill_fields: [cust_key]
   }
 
   dimension: customer_tier {
