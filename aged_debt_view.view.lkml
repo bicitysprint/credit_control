@@ -131,24 +131,28 @@ view: aged_debt_view {
   }
 
   dimension: period_amt_1 {
+    label: "Over 30 Days"
     type: number
     value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_1" ;;
   }
 
   dimension: period_amt_2 {
+    label: "Over 60 Days"
     type: number
     value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_2" ;;
   }
 
   dimension: period_amt_3 {
+    label: "Over 90 Days"
     type: number
     value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_3" ;;
   }
 
   dimension: period_amt_4 {
+    label: "Over 120 Days"
     type: number
     value_format_name: gbp
     sql: ${TABLE}."PERIOD_AMT_4" ;;
