@@ -231,6 +231,7 @@ view: payment_receipts {
       date,
       week,
       month,
+      month_name,
       quarter,
       year
     ]
