@@ -110,6 +110,7 @@ view: aged_debt_view {
     intervals: [day]
     sql_start: ${latest_receipt_date} ;;
     sql_end: CURRENT_DATE();;
+    drill_fields: [cust_key]
   }
 
 
