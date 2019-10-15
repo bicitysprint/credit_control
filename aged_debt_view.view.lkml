@@ -2,6 +2,7 @@ view: aged_debt_view {
   sql_table_name: CC.AGED_DEBT_VIEW ;;
 
   dimension: account_sc {
+    hidden: yes
     type: string
     sql: ${TABLE}."ACCOUNT_SC" ;;
   }
@@ -12,11 +13,13 @@ view: aged_debt_view {
   }
 
   dimension: bank_name {
+    hidden: yes
     type: string
     sql: ${TABLE}."BANK_NAME" ;;
   }
 
   dimension: c_desc {
+    hidden: yes
     type: string
     sql: ${TABLE}."C_DESC" ;;
   }
@@ -32,6 +35,7 @@ view: aged_debt_view {
    }
 
   dimension: cust_key {
+    label: "Customer Key"
     primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
@@ -44,11 +48,13 @@ view: aged_debt_view {
   }
 
   dimension: e_desc {
+    label: "Salesperson"
     type: string
     sql: ${TABLE}."E_DESC" ;;
   }
 
   dimension: g_desc {
+    label: "Account Manager"
     type: string
     sql: case
     when ${TABLE}."G_DESC" is null then 'NONE ASSIGNED'
