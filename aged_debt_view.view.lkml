@@ -58,6 +58,7 @@ view: aged_debt_view {
     type: string
     sql: case
     when ${TABLE}."G_DESC" is null then ${TABLE}."E_DESC"
+    when ${TABLE}."E_DESC" is null then 'NONE ASSIGNED'
     else ${TABLE}."G_DESC"
     END ;;
   }
