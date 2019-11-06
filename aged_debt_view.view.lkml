@@ -123,6 +123,7 @@ view: aged_debt_view {
   dimension: name {
     type: string
     sql: ${TABLE}."NAME" ;;
+    drill_fields: [name, cust_key, customer_tier, h_desc, g_desc, e_desc, sum]
   }
 
   dimension: office_code {
