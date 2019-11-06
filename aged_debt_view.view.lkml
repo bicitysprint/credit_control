@@ -50,7 +50,10 @@ view: aged_debt_view {
   dimension: e_desc {
     label: "Salesperson"
     type: string
-    sql: ${TABLE}."E_DESC" ;;
+    sql: case
+    when ${TABLE}."E_DESC" is null then 'NONE ASSIGNED'
+    else ${TABLE}."E_DESC"
+    END ;;
   }
 
   dimension: g_desc {
@@ -58,7 +61,6 @@ view: aged_debt_view {
     type: string
     sql: case
     when ${TABLE}."G_DESC" is null then ${TABLE}."E_DESC"
-    when ${TABLE}."E_DESC" is null then 'NONE ASSIGNED'
     else ${TABLE}."G_DESC"
     END ;;
   }
