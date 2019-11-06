@@ -57,7 +57,7 @@ view: aged_debt_view {
     label: "Account Manager"
     type: string
     sql: case
-    when ${TABLE}."G_DESC" is null then 'NONE ASSIGNED'
+    when ${TABLE}."G_DESC" is null then ${TABLE}."E_DESC"
     else ${TABLE}."G_DESC"
     END ;;
   }
