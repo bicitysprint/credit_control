@@ -130,6 +130,7 @@ view: credit_control_targets {
   measure: sum {
     type: sum
     sql: ${current}+${p1}+${p2}+${p3}+${p4}+${unallocated_amount}  ;;
+    drill_fields: [controller_name, archive_month, customer_key, sum]
   }
 
 }
