@@ -94,6 +94,7 @@ view: credit_control_targets {
   measure: sum_p1 {
     type: sum
     sql: ${p1} ;;
+    drill_fields: [controller_name, archive_month, customer_key, p2]
      }
 
   measure: sum_p2 {
@@ -117,11 +118,13 @@ view: credit_control_targets {
   measure: sum_curr {
     type: sum
     sql: ${current} ;;
+    drill_fields: [controller_name, archive_month, customer_key, p2]
   }
 
   measure: sum_un {
     type: sum
     sql: ${unallocated_amount} ;;
+    drill_fields: [controller_name, archive_month, customer_key, p2]
   }
 
   measure: sum {
