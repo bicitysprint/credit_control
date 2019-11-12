@@ -94,11 +94,12 @@ view: credit_control_targets {
   measure: sum_p1 {
     type: sum
     sql: ${p1} ;;
-  }
+     }
 
   measure: sum_p2 {
     type: sum
     sql: ${p2} ;;
+    drill_fields: [controller_name, archive_month, customer_key, p2]
   }
 
   measure: sum_p3 {
