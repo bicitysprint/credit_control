@@ -70,7 +70,7 @@ view: aged_debt_view {
     type: string
     sql: case
     when ${TABLE}."H_DESC" = 'CUSTOMER DD ACCOUNTS' or "H_DESC" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
-    when ${TABLE}."H_DESC" = 'GAIL HAMEED' or "H_DESC" = 'GAIL HAMEED.' then 'GAIL HAMEED'
+   /*when ${TABLE}."H_DESC" = 'GAIL HAMEED' or "H_DESC" = 'GAIL HAMEED.' then 'GAIL HAMEED'*/
     when ${TABLE}."H_DESC" = 'GLYN COBB' or "H_DESC" = 'GLYN COBB.' then 'GLYN COBB'
     else ${TABLE}."H_DESC"
     END ;;
