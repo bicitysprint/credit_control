@@ -15,7 +15,7 @@ view: credit_control_targets {
     type: string
     sql:case
     when ${TABLE}."Controller Name" = 'CUSTOMER DD ACCOUNTS' or "Controller Name" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
-    when ${TABLE}."Controller Name" = 'GAIL HAMEED' or "Controller Name" = 'GAIL HAMEED.' then 'GAIL HAMEED'
+/*    when ${TABLE}."Controller Name" = 'GAIL HAMEED' or "Controller Name" = 'GAIL HAMEED.' then 'GAIL HAMEED' */
     when ${TABLE}."Controller Name" = 'GLYN COBB' or "Controller Name" = 'GLYN COBB.' then 'GLYN COBB'
     else ${TABLE}."Controller Name"
     END ;;
