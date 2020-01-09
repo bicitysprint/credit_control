@@ -100,19 +100,19 @@ view: credit_control_targets {
   measure: sum_p2 {
     type: sum
     sql: ${p2} ;;
-    drill_fields: [controller_name, archive_month, customer_key, p2]
+    drill_fields: [controller_name, archive_month, customer_key, customer_tier, p2]
   }
 
   measure: sum_p3 {
     type: sum
     sql: ${p3} ;;
-    drill_fields: [controller_name, archive_month, customer_key, p3]
+    drill_fields: [controller_name, archive_month, customer_key, customer_tier, p3]
   }
 
   measure: sum_p4 {
     type: sum
     sql: ${p4} ;;
-    drill_fields: [controller_name, archive_month, customer_key, p4]
+    drill_fields: [controller_name, archive_month, customer_key, customer_tier, p4]
   }
 
   measure: sum_curr {
@@ -130,7 +130,7 @@ view: credit_control_targets {
   measure: sum {
     type: sum
     sql: ${current}+${p1}+${p2}+${p3}+${p4}+${unallocated_amount}  ;;
-    drill_fields: [controller_name, archive_month, customer_key, sum]
+    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum]
   }
 
 }
