@@ -100,8 +100,8 @@ view: credit_control_targets {
   measure: sum_p2 {
     type: sum
     sql: ${p2} ;;
-    drill_fields: [controller_name, archive_month, customer_key, customer_tier, p2]
-    link: {label: "Drill Sorted by P2 Amount" url: "{{ sum_p2._link}}&sorts=credit_control_targets.sum_p2" }
+    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
+  ##  link: {label: "Drill Sorted by P2 Amount" url: "{{ sum_p2._link}}&sorts=credit_control_targets.sum_p2" }
   }
 
   measure: sum_p3 {
