@@ -72,6 +72,7 @@ view: aged_debt_view {
     when ${TABLE}."H_DESC" = 'CUSTOMER DD ACCOUNTS' or "H_DESC" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
    /*when ${TABLE}."H_DESC" = 'GAIL HAMEED' or "H_DESC" = 'GAIL HAMEED.' then 'GAIL HAMEED'*/
     when ${TABLE}."H_DESC" = 'GLYN COBB' or "H_DESC" = 'GLYN COBB.' then 'GLYN COBB'
+    when ${TABLE}."H_DESC" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
     else ${TABLE}."H_DESC"
     END ;;
     drill_fields: [aged_debt_view.h_desc]
@@ -171,6 +172,7 @@ view: aged_debt_view {
   dimension: pickup_contact {
     type: string
     sql: ${TABLE}."PICKUP_CONTACT" ;;
+    drill_fields: [pickup_contact]
   }
 
   dimension: region {
