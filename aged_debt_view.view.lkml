@@ -45,6 +45,7 @@ view: aged_debt_view {
   dimension: customer_tier {
     type: string
     sql: ${TABLE}."CUSTOMER_TIER" ;;
+    drill_fields: [customer_tier]
   }
 
   dimension: e_desc {
@@ -60,7 +61,7 @@ view: aged_debt_view {
     label: "Account Manager"
     type: string
     sql: case
-    when ${TABLE}."G_DESC" is null then ${TABLE}."E_DESC"
+    when ${TABLE}."G_DESC" is null then 'NO ACCOUNT MANAGER'
     else ${TABLE}."G_DESC"
     END ;;
   }
