@@ -177,6 +177,7 @@ view: payment_receipts {
   dimension: payment_method {
     type: string
     sql: ${TABLE}."PAYMENT_METHOD" ;;
+    drill_fields: [payment_method]
   }
 
   dimension: payment_mode {
