@@ -177,7 +177,7 @@ view: payment_receipts {
   dimension: payment_method {
     type: string
     sql: ${TABLE}."PAYMENT_METHOD" ;;
-    drill_fields: [payment_method, customer_key, receipt_date]
+    drill_fields: [payment_method_set*]
   }
 
   dimension: payment_mode {
@@ -293,5 +293,14 @@ view: payment_receipts {
     value_format_name: gbp
     drill_fields: [customer_key, payment_method, receipt_date, sum]
   }
+
+  set: payment_method_set {
+    fields: [
+    payment_method,
+    customer_key,
+    receipt_date
+    ]
+  }
+
 
 }
