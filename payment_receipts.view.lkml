@@ -290,7 +290,7 @@ view: payment_receipts {
     type: sum
     sql: ${TABLE}.RECEIPT_AMOUNT ;;
     value_format_name: gbp
-    drill_fields: [customer_key, payment_method, receipt_date, receipt_amount]
+    drill_fields: [customer_key, payment_method, receipt_date, sum]
   }
 
 }
