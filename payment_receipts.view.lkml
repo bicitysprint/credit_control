@@ -294,12 +294,6 @@ view: payment_receipts {
     drill_fields: [customer_key, payment_method, receipt_date, sum]
   }
 
-  measure: sum_of_receipt_count {
-    label: "Total receipt Count"
-    type: sum
-    sql: sum(${TABLE}."COUNT_1") ;;
-  }
-
 
 ##  set: payment_method_set {
 ##    fields: [
