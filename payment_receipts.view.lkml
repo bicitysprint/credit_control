@@ -177,7 +177,7 @@ view: payment_receipts {
   dimension: payment_method {
     type: string
     sql: ${TABLE}."PAYMENT_METHOD" ;;
-    drill_fields: [payment_method_set*]
+    drill_fields: [payment_method]
   }
 
   dimension: payment_mode {
@@ -294,13 +294,20 @@ view: payment_receipts {
     drill_fields: [customer_key, payment_method, receipt_date, sum]
   }
 
-  set: payment_method_set {
-    fields: [
-    payment_method,
-    customer_key,
-    receipt_date
-    ]
+  measure: sum_of_receipt_count {
+    label: "Total receipt Count"
+    type: sum
+    sql: sum(${TABLE}."COUNT_1") ;;
   }
+
+
+##  set: payment_method_set {
+##    fields: [
+##    payment_method,
+##    customer_key,
+##    receipt_date
+##    ]
+##  }
 
 
 }
