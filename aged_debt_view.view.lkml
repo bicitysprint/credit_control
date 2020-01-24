@@ -171,6 +171,7 @@ view: aged_debt_view {
   }
 
   dimension: pickup_contact {
+    label: "Consol Code"
     type: string
     sql: ${TABLE}."PICKUP_CONTACT" ;;
     drill_fields: [pickup_contact]
