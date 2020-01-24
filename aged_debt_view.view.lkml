@@ -260,6 +260,7 @@ view: aged_debt_view {
   measure: sum_p3 {
     type: sum
     sql: ${period_amt_3} ;;
+    drill_fields: [sum_p3]
   }
 
   measure: sum_p4 {
