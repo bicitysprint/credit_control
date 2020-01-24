@@ -8,6 +8,7 @@ view: aged_debt_view {
   }
 
   dimension: bank_account_no {
+    label: "GF Code"
     type: string
     sql: ${TABLE}."BANK_ACCOUNT_NO" ;;
   }
