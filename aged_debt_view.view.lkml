@@ -142,28 +142,40 @@ view: aged_debt_view {
     label: "Over 30 Days"
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."PERIOD_AMT_1" ;;
+    sql: case
+      when ${TABLE}."PERIOD_AMT_1" = '0.00' then NULL
+      else ${TABLE}."PERIOD_AMT_1"
+      END ;;
   }
 
   dimension: period_amt_2 {
     label: "Over 60 Days"
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."PERIOD_AMT_2" ;;
+    sql:case
+      when ${TABLE}."PERIOD_AMT_2" = '0.00' then NULL
+      else ${TABLE}."PERIOD_AMT_2"
+      END ;;
   }
 
   dimension: period_amt_3 {
     label: "Over 90 Days"
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."PERIOD_AMT_3" ;;
+    sql: case
+      when ${TABLE}."PERIOD_AMT_3" = '0.00' then NULL
+      else ${TABLE}."PERIOD_AMT_3"
+      END ;;
   }
 
   dimension: period_amt_4 {
     label: "Over 120 Days"
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."PERIOD_AMT_4" ;;
+    sql: case
+      when ${TABLE}."PERIOD_AMT_4" = '0.00' then NULL
+      else ${TABLE}."PERIOD_AMT_4"
+      END ;;
   }
 
   dimension: period_amt_curr {
@@ -177,7 +189,7 @@ view: aged_debt_view {
       when ${TABLE}."PERIOD_AMT_4" <= '0.00' then ${TABLE}."PERIOD_AMT_3"
       when ${TABLE}."PERIOD_AMT_3" <= '0.00' then ${TABLE}."PERIOD_AMT_2"
       when ${TABLE}."PERIOD_AMT_2" <= '0.00' then ${TABLE}."PERIOD_AMT_1"
-      when ${TABLE}."PERIOD_AMT_1" <= '0.00' then 'NO OVERDUE INVOICES'
+      when ${TABLE}."PERIOD_AMT_1" <= '0.00' then NULL
       else NULL END;;
   }
 
