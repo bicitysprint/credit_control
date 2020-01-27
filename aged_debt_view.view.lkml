@@ -142,49 +142,34 @@ view: aged_debt_view {
     label: "Over 30 Days"
     type: number
     value_format_name: gbp
-    sql: case
-      when ${TABLE}."PERIOD_AMT_1" = '0.00' then NULL
-      else ${TABLE}."PERIOD_AMT_1"
-      END ;;
+    sql: ${TABLE}."PERIOD_AMT_1" ;;
   }
 
   dimension: period_amt_2 {
     label: "Over 60 Days"
     type: number
     value_format_name: gbp
-    sql:case
-      when ${TABLE}."PERIOD_AMT_2" = '0.00' then NULL
-      else ${TABLE}."PERIOD_AMT_2"
-      END ;;
+    sql: ${TABLE}."PERIOD_AMT_2" ;;
   }
 
   dimension: period_amt_3 {
     label: "Over 90 Days"
     type: number
     value_format_name: gbp
-    sql: case
-      when ${TABLE}."PERIOD_AMT_3" = '0.00' then NULL
-      else ${TABLE}."PERIOD_AMT_3"
-      END ;;
+    sql: ${TABLE}."PERIOD_AMT_3" ;;
   }
 
   dimension: period_amt_4 {
     label: "Over 120 Days"
     type: number
     value_format_name: gbp
-    sql: case
-      when ${TABLE}."PERIOD_AMT_4" = '0.00' then NULL
-      else ${TABLE}."PERIOD_AMT_4"
-      END ;;
+    sql: ${TABLE}."PERIOD_AMT_4" ;;
   }
 
   dimension: period_amt_curr {
     type: number
     value_format_name: gbp
-    sql:  case
-      when ${TABLE}."PERIOD_AMT_CURR" = '0.00' then NULL
-      else ${TABLE}."PERIOD_AMT_CURR"
-      END ;;
+    sql: ${TABLE}."PERIOD_AMT_CURR" ;;
   }
 
 ##  dimension: oldest_outstanding_invoice_amount_by_period {
@@ -265,10 +250,7 @@ view: aged_debt_view {
   dimension: unallocated_amt {
     type: number
     value_format_name: gbp
-    sql: case
-      when ${TABLE}."UNALLOCATED_AMT" = '0.00' then NULL
-      else ${TABLE}."UNALLOCATED_AMT"
-      END ;;
+    sql: ${TABLE}."UNALLOCATED_AMT" ;;
   }
 
   measure: count {
