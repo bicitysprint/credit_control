@@ -173,12 +173,12 @@ view: aged_debt_view {
   }
 
   dimension: last_invoice_period {
-    type: string
+    type: number
     sql: case
       when ${TABLE}."PERIOD_AMT_4" = '0.00' then ${TABLE}."PERIOD_AMT_3"
       when ${TABLE}."PERIOD_AMT_3" = '0.00' then ${TABLE}."PERIOD_AMT_2"
       when ${TABLE}."PERIOD_AMT_2" = '0.00' then ${TABLE}."PERIOD_AMT_1"
-      when ${TABLE}."PERIOD_AMT_1" = '0.00' then 'NOT RECENTLY INVOICED'
+--      when ${TABLE}."PERIOD_AMT_1" = '0.00' then 'NOT RECENTLY INVOICED'
       else NULL END;;
   }
 
