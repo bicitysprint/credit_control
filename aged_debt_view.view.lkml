@@ -188,13 +188,15 @@ view: aged_debt_view {
   }
 
   dimension: oldest_outstanding_invoice_by_period {
-      sql: case
-      when ${TABLE}."PERIOD_AMT_4" is NULL then ${TABLE}."PERIOD_AMT_3"
-      when ${TABLE}."PERIOD_AMT_3" is NULL then ${TABLE}."PERIOD_AMT_2"
-      when ${TABLE}."PERIOD_AMT_2" is NULL then ${TABLE}."PERIOD_AMT_1"
-      when ${TABLE}."PERIOD_AMT_1" is NULL then ${TABLE}."PERIOD_AMT_CURR"
-      else NULL END;;
+        sql: COALESCE(${TABLE}."PERIOD_AMT_CURR", ${TABLE}."PERIOD_AMT_1", ${TABLE}."PERIOD_AMT_2", ${TABLE}."PERIOD_AMT_3", ${TABLE}."PERIOD_AMT_4") ;;
   }
+##      sql: case
+##      when ${TABLE}."PERIOD_AMT_4" is NULL then ${TABLE}."PERIOD_AMT_3"
+##      when ${TABLE}."PERIOD_AMT_3" is NULL then ${TABLE}."PERIOD_AMT_2"
+##      when ${TABLE}."PERIOD_AMT_2" is NULL then ${TABLE}."PERIOD_AMT_1"
+##      when ${TABLE}."PERIOD_AMT_1" is NULL then ${TABLE}."PERIOD_AMT_CURR"
+##      else NULL END;;
+
 
   dimension: pickup_contact {
     label: "Consol Code"
