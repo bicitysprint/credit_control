@@ -132,7 +132,7 @@ view: aged_debt_view {
 --    when ${TABLE}."DAYS_SINCE_LAST_PAID" > '0 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" <= '34 days' then 'STANDARD CHASE'
 --    when ${TABLE}."DAYS_SINCE_LAST_PAID" >= '35 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" <= '45 days' then 'URGENT CHASE'
 --    when ${TABLE}."DAYS_SINCE_LAST_PAID" > '45 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" < '5500 days' then 'FINAL DEMAND'
-    when ${days_days_since_last_paid} > '0 days' AND ${days_days_since_last_paid} <= '34 days' then 'STANDARD CHASE'
+    when ${days_days_since_last_paid} >= '1 days' AND ${days_days_since_last_paid} <= '34 days' then 'STANDARD CHASE'
     when ${days_days_since_last_paid} >= '35 days' AND ${days_days_since_last_paid} <= '45 days' then 'URGENT CHASE'
     when ${days_days_since_last_paid} > '45 days' AND ${days_days_since_last_paid} < '5500 days' then 'FINAL DEMAND'
 
