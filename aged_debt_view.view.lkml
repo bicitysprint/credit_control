@@ -172,9 +172,8 @@ view: aged_debt_view {
     sql: ${TABLE}."PERIOD_AMT_CURR" ;;
   }
 
-  dimension: last_invoice_period {
-    type: number
-    sql: case
+  dimension: most_recent_invoice_period {
+      sql: case
       when ${TABLE}."PERIOD_AMT_4" = '0.00' then ${TABLE}."PERIOD_AMT_3"
       when ${TABLE}."PERIOD_AMT_3" = '0.00' then ${TABLE}."PERIOD_AMT_2"
       when ${TABLE}."PERIOD_AMT_2" = '0.00' then ${TABLE}."PERIOD_AMT_1"
