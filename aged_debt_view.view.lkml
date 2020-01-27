@@ -187,12 +187,12 @@ view: aged_debt_view {
       END ;;
   }
 
-  dimension: most_recent_invoice_period {
+  dimension: oldest_outstanding_invoice_by_period {
       sql: case
-      when ${TABLE}."PERIOD_AMT_4" <= '0.00' then ${TABLE}."PERIOD_AMT_3"
-      when ${TABLE}."PERIOD_AMT_3" <= '0.00' then ${TABLE}."PERIOD_AMT_2"
-      when ${TABLE}."PERIOD_AMT_2" <= '0.00' then ${TABLE}."PERIOD_AMT_1"
-      when ${TABLE}."PERIOD_AMT_1" <= '0.00' then NULL
+      when ${TABLE}."PERIOD_AMT_4" is NULL then ${TABLE}."PERIOD_AMT_3"
+      when ${TABLE}."PERIOD_AMT_3" is NULL then ${TABLE}."PERIOD_AMT_2"
+      when ${TABLE}."PERIOD_AMT_2" is NULL then ${TABLE}."PERIOD_AMT_1"
+      when ${TABLE}."PERIOD_AMT_1" is NULL then ${TABLE}."PERIOD_AMT_CURR"
       else NULL END;;
   }
 
