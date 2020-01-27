@@ -173,7 +173,7 @@ view: aged_debt_view {
   }
 
   dimension: last_invoice_period {
-    type: number
+    type: string
     sql: case
       when ${TABLE}."PERIOD_AMT_4" = '0.00' then ${TABLE}."PERIOD_AMT_3"
       when ${TABLE}."PERIOD_AMT_3" = '0.00' then ${TABLE}."PERIOD_AMT_2"
