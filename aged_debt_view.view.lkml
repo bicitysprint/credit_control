@@ -126,6 +126,15 @@ view: aged_debt_view {
     drill_fields: [cust_key]
   }
 
+  dimension: chase_status {
+    sql: case
+    when ${TABLE}."DAYS_SINCE_LAST_PAID" > '0 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" <= '34 days' then 'STANDARD CHASE'
+    when ${TABLE}."DAYS_SINCE_LAST_PAID" >= '35 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" > '45 days' then 'URGENT CHASE'
+    when ${TABLE}."DAYS_SINCE_LAST_PAID" > '45 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" > '5500 days' then 'FINAL DEMAND'
+    else NULL
+    END ;;
+  }
+
 
   dimension: name {
     type: string
