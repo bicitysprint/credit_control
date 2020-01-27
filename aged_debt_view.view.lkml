@@ -127,6 +127,7 @@ view: aged_debt_view {
   }
 
   dimension: chase_status {
+    type: string
     sql: case
     when ${TABLE}."DAYS_SINCE_LAST_PAID" > '0 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" <= '34 days' then 'STANDARD CHASE'
     when ${TABLE}."DAYS_SINCE_LAST_PAID" >= '35 days' AND ${TABLE}."DAYS_SINCE_LAST_PAID" <= '45 days' then 'URGENT CHASE'
