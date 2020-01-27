@@ -174,10 +174,10 @@ view: aged_debt_view {
 
   dimension: most_recent_invoice_period {
       sql: case
-      when ${TABLE}."PERIOD_AMT_4" =< '0.00' then ${TABLE}."PERIOD_AMT_3"
-      when ${TABLE}."PERIOD_AMT_3" =< '0.00' then ${TABLE}."PERIOD_AMT_2"
-      when ${TABLE}."PERIOD_AMT_2" =< '0.00' then ${TABLE}."PERIOD_AMT_1"
-      when ${TABLE}."PERIOD_AMT_1" =< '0.00' then 'NO OVERDUE INVOICES'
+      when ${TABLE}."PERIOD_AMT_4" <= '0.00' then ${TABLE}."PERIOD_AMT_3"
+      when ${TABLE}."PERIOD_AMT_3" <= '0.00' then ${TABLE}."PERIOD_AMT_2"
+      when ${TABLE}."PERIOD_AMT_2" <= '0.00' then ${TABLE}."PERIOD_AMT_1"
+      when ${TABLE}."PERIOD_AMT_1" <= '0.00' then 'NO OVERDUE INVOICES'
       else NULL END;;
   }
 
