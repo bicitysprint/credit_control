@@ -181,7 +181,10 @@ view: aged_debt_view {
   dimension: period_amt_curr {
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."PERIOD_AMT_CURR" ;;
+    sql:  case
+      when ${TABLE}."PERIOD_AMT_CURR" = '0.00' then NULL
+      else ${TABLE}."PERIOD_AMT_CURR"
+      END ;;
   }
 
   dimension: most_recent_invoice_period {
@@ -260,7 +263,10 @@ view: aged_debt_view {
   dimension: unallocated_amt {
     type: number
     value_format_name: gbp
-    sql: ${TABLE}."UNALLOCATED_AMT" ;;
+    sql: case
+      when ${TABLE}."UNALLOCATED_AMT" = '0.00' then NULL
+      else ${TABLE}."UNALLOCATED_AMT"
+      END ;;
   }
 
   measure: count {
