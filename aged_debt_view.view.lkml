@@ -187,9 +187,9 @@ view: aged_debt_view {
       END ;;
   }
 
-  dimension: oldest_outstanding_invoice_amount_by_period {
-        sql: COALESCE(${TABLE}."PERIOD_AMT_CURR", ${TABLE}."PERIOD_AMT_1", ${TABLE}."PERIOD_AMT_2", ${TABLE}."PERIOD_AMT_3", ${TABLE}."PERIOD_AMT_4") ;;
-  }
+##  dimension: oldest_outstanding_invoice_amount_by_period {
+##        sql: COALESCE(${TABLE}."PERIOD_AMT_CURR", ${TABLE}."PERIOD_AMT_1", ${TABLE}."PERIOD_AMT_2", ${TABLE}."PERIOD_AMT_3", ${TABLE}."PERIOD_AMT_4") ;;
+##  }
 ##      sql: case
 ##      when ${TABLE}."PERIOD_AMT_4" is NULL then ${TABLE}."PERIOD_AMT_3"
 ##      when ${TABLE}."PERIOD_AMT_3" is NULL then ${TABLE}."PERIOD_AMT_2"
