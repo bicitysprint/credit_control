@@ -174,10 +174,10 @@ view: aged_debt_view {
 
   dimension: most_recent_invoice_period {
       sql: case
-      when ${TABLE}."PERIOD_AMT_4" = '0.00' then ${TABLE}."PERIOD_AMT_3"
-      when ${TABLE}."PERIOD_AMT_3" = '0.00' then ${TABLE}."PERIOD_AMT_2"
-      when ${TABLE}."PERIOD_AMT_2" = '0.00' then ${TABLE}."PERIOD_AMT_1"
---      when ${TABLE}."PERIOD_AMT_1" = '0.00' then 'NOT RECENTLY INVOICED'
+      when ${TABLE}."PERIOD_AMT_4" > '0.00' then 'OVER 120 DAYS' else ${TABLE}."PERIOD_AMT_3"
+      when ${TABLE}."PERIOD_AMT_3" > '0.00' then 'OVER 90 DAYS' else ${TABLE}."PERIOD_AMT_2"
+      when ${TABLE}."PERIOD_AMT_2" > '0.00' then 'OVER 60 DAYS' else ${TABLE}."PERIOD_AMT_1"
+      when ${TABLE}."PERIOD_AMT_1" > '0.00' then 'OVER 30 DAYS' else 'NOT RECENTLY INVOICED'
       else NULL END;;
   }
 
