@@ -149,6 +149,11 @@ view: aged_debt_view {
     sql: ${TABLE}."OFFICE_CODE" ;;
   }
 
+  dimension: payment_terms {
+    type: string
+    sql: ${TABLE}."PAYMENT_TERMS" ;;
+  }
+
   dimension: period_amt_1 {
     label: "Over 30 Days"
     type: number
