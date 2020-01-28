@@ -158,7 +158,7 @@ view: aged_debt_view {
     when ${TABLE}."PAYMENT_TERMS" = '30 DAYS' or "PAYMENT_TERMS" = '30_DAYS' or "PAYMENT_TERMS" = '30 DAYS FROM DATE OF INVOICE' then '30'
     when ${TABLE}."PAYMENT_TERMS" = '45 DAYS' or "PAYMENT_TERMS" = '45_DAYS' or "PAYMENT_TERMS" = 'STRICT 45 DAYS' then '45'
     when ${TABLE}."PAYMENT_TERMS" = '60 DAYS' or "PAYMENT_TERMS" = '60_DAYS' or "PAYMENT_TERMS" = '60+6 WORKING DAYS' or "PAYMENT_TERMS" = '60+6WORKING DAYS' then '60'
-    else NULL
+    else 'NOT SPECIFIED'
     END ;;
   }
 
