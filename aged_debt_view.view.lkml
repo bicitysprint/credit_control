@@ -153,6 +153,7 @@ view: aged_debt_view {
     label: "Payment Terms (Days)"
     type: string
     sql: case
+    when ${TABLE}."PAYMENT_TERMS" = '0 DAYS' or "PAYMENT_TERMS" = '0_DAYS' then '0'
     when ${TABLE}."PAYMENT_TERMS" = '14 DAYS' or "PAYMENT_TERMS" = '14_DAYS' then '14'
     when ${TABLE}."PAYMENT_TERMS" = '30 DAYS' or "PAYMENT_TERMS" = '30_DAYS' or "PAYMENT_TERMS" = '30 DAYS FROM DATE OF INVOICE' then '30'
     when ${TABLE}."PAYMENT_TERMS" = '45 DAYS' or "PAYMENT_TERMS" = '45_DAYS' or "PAYMENT_TERMS" = 'STRICT 45 DAYS' then '45'
