@@ -156,6 +156,7 @@ view: aged_debt_view {
 
   dimension: payment_terms {
     label: "Payment Terms (Days)"
+    description: "Includes a nominated/assumed value of 30 (days) for all accounts lacking fixed payment terms"
     type: string
     sql: case
     when ${TABLE}."PAYMENT_TERMS" = '0 DAYS' or "PAYMENT_TERMS" = '0_DAYS' then '0'
@@ -163,7 +164,7 @@ view: aged_debt_view {
     when ${TABLE}."PAYMENT_TERMS" = '30 DAYS' or "PAYMENT_TERMS" = '30_DAYS' or "PAYMENT_TERMS" = '30 DAYS FROM DATE OF INVOICE' then '30'
     when ${TABLE}."PAYMENT_TERMS" = '45 DAYS' or "PAYMENT_TERMS" = '45_DAYS' or "PAYMENT_TERMS" = 'STRICT 45 DAYS' then '45'
     when ${TABLE}."PAYMENT_TERMS" = '60 DAYS' or "PAYMENT_TERMS" = '60_DAYS' or "PAYMENT_TERMS" = '60+6 WORKING DAYS' or "PAYMENT_TERMS" = '60+6WORKING DAYS' then '60'
-    else 'NOT SPECIFIED'
+    else '30'
     END ;;
   }
 
