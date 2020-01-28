@@ -126,6 +126,12 @@ view: aged_debt_view {
     drill_fields: [cust_key]
   }
 
+   dimension: days_since_receipt {
+    type: string
+    sql: ${TABLE}."DAYS_SINCE_RECEIPT" ;;
+   }
+
+
   dimension: chase_status {
     type: string
     sql: case
