@@ -160,7 +160,7 @@ view: aged_debt_view {
 
   dimension: payment_terms {
     label: "Payment Terms (Days)"
-    description: "Includes a nominated/assumed value of 30 (days) for all accounts lacking fixed payment terms"
+    description: "Includes a nominated/assumed value of 30 (days) for all accounts which appear to lack payment terms"
     type: string
     sql: case
     when ${TABLE}."PAYMENT_TERMS" = '0 DAYS' or "PAYMENT_TERMS" = '0_DAYS' then '0'
