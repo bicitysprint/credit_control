@@ -127,8 +127,12 @@ view: aged_debt_view {
   }
 
    dimension: days_since_receipt {
+    label: "Days Since Last Receipt"
     type: string
-    sql: ${TABLE}."DAYS_SINCE_RECEIPT" ;;
+    sql: case
+    when ${TABLE}."DAYS_SINCE_RECEIPT" IS NULL then '0'
+    else ${TABLE}."DAYS_SINCE_RECEIPT"
+    END ;;
    }
 
 
