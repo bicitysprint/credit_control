@@ -132,7 +132,6 @@ view: aged_debt_view {
     when ${days_days_since_last_paid} >= '1' AND ${days_days_since_last_paid} <= '34' then 'STANDARD'
     when ${days_days_since_last_paid} >= '35' AND ${days_days_since_last_paid} <= '45' then 'URGENT'
     when ${days_days_since_last_paid} > '45' AND ${days_days_since_last_paid} < '5500' then 'FINAL DEMAND'
-
     else NULL
     END ;;
   }
