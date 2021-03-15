@@ -1,4 +1,5 @@
 view: vw_ageddebt_new {
+  view_label: "Aged Debt"
   sql_table_name: "CC"."VW_AGEDDEBT_NEW"
     ;;
 
