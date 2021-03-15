@@ -23,7 +23,9 @@ datagroup: credit_control_reporting_datagroup {
 
 persist_with: credit_control_reporting_datagroup
 
-explore: vw_ageddebt_new {}
+explore: vw_ageddebt_new {
+  label: "Aged Debt Report"
+}
 
 
 # # Select the views that should be a part of this model,
