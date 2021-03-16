@@ -1,5 +1,5 @@
 view: vw_ageddebt_new {
-  view_label: "Aged Debt"
+  view_label: "Aged Debt Base"
   sql_table_name: "CC"."VW_AGEDDEBT_NEW"
     ;;
 
