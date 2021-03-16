@@ -38,6 +38,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: current_ {
+    label: "CURRENT_PERIOD"
     type: number
     sql: ${TABLE}."CURRENT_" ;;
   }
@@ -58,6 +59,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: id_inkey_in_cukey {
+    label: "CUSTOMER_KEY"
     type: string
     sql: ${TABLE}."ID_INKEY_IN_CUKEY" ;;
   }
@@ -92,6 +94,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: name {
+    label: "ACCOUNT_NAME"
     type: string
     sql: ${TABLE}."NAME" ;;
   }
