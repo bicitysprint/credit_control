@@ -89,8 +89,7 @@ view: vw_ageddebt_new {
   }
 
   measure: sum_of_outstanding {
-    type: sum_distinct
-    sql_distinct_key: ${vw_ageddebt_new.customer_key} ;;
+    type: sum
     sql: ${outstanding_amount} ;;
     value_format_name: gbp
     drill_fields: []
