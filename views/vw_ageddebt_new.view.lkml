@@ -14,6 +14,7 @@ view: vw_ageddebt_new {
   }
 
   dimension: customer_key {
+    primary_key: yes
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
   }
