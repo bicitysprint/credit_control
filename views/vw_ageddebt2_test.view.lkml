@@ -5,6 +5,7 @@ view: vw_ageddebt2_test {
   dimension: brought_fwd_amt {
     type: number
     sql: ${TABLE}."BROUGHT_FWD_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension: client_code {
@@ -35,12 +36,14 @@ view: vw_ageddebt2_test {
   dimension: credit_amount {
     type: number
     sql: ${TABLE}."CREDIT_AMOUNT" ;;
+    value_format_name: gbp
   }
 
   dimension: current_ {
     label: "Current_Period"
     type: number
     sql: ${TABLE}."CURRENT_" ;;
+    value_format_name: gbp
   }
 
   dimension: cust_email {
@@ -57,6 +60,7 @@ view: vw_ageddebt2_test {
   dimension: final_unallocated_amt {
     type: number
     sql: ${TABLE}."FINAL_UNALLOCATED_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension: id_inkey_in_cukey {
@@ -78,6 +82,7 @@ view: vw_ageddebt2_test {
   dimension: last_recpt_amt {
     type: number
     sql: ${TABLE}."LAST_RECPT_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension_group: last_recpt {
@@ -103,26 +108,31 @@ view: vw_ageddebt2_test {
   dimension: outstanding_amount {
     type: number
     sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
+    value_format_name: gbp
   }
 
   dimension: period1 {
     type: number
     sql: ${TABLE}."PERIOD1" ;;
+    value_format_name: gbp
   }
 
   dimension: period2 {
     type: number
     sql: ${TABLE}."PERIOD2" ;;
+    value_format_name: gbp
   }
 
   dimension: period3 {
     type: number
     sql: ${TABLE}."PERIOD3" ;;
+    value_format_name: gbp
   }
 
   dimension: period4 {
     type: number
     sql: ${TABLE}."PERIOD4" ;;
+    value_format_name: gbp
   }
 
   dimension: posted_period {
@@ -153,6 +163,7 @@ view: vw_ageddebt2_test {
   dimension: unallocated_amt {
     type: number
     sql: ${TABLE}."UNALLOCATED_AMT" ;;
+    value_format_name: gbp
   }
 
   measure: count {
@@ -164,6 +175,7 @@ view: vw_ageddebt2_test {
     type: sum_distinct
     sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${brought_fwd_amt} ;;
+    value_format_name: gbp
     drill_fields: []
   }
 
