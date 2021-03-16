@@ -95,7 +95,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: name {
-    label: "ACCOUNT_NAME"
+    label: "Account_Name"
     type: string
     sql: ${TABLE}."NAME" ;;
   }
