@@ -159,4 +159,12 @@ view: vw_ageddebt2_test {
     type: count
     drill_fields: [name]
   }
+
+  measure: total_outstanding {
+    type: sum_distinct
+    sql_distinct_key: ${id_inkey_in_cukey} ;;
+    sql: ${brought_fwd_amt} ;;
+    drill_fields: []
+  }
+
 }
