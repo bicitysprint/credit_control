@@ -49,6 +49,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: customer_key {
+    hidden: yes
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
   }
@@ -59,7 +60,6 @@ view: vw_ageddebt2_test {
   }
 
   dimension: id_inkey_in_cukey {
-    hidden: yes
     label: "Customer_Key"
     type: string
     sql: ${TABLE}."ID_INKEY_IN_CUKEY" ;;
