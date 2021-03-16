@@ -24,9 +24,15 @@ datagroup: credit_control_reporting_datagroup {
 persist_with: credit_control_reporting_datagroup
 
 explore: vw_ageddebt_new {
-  label: "Aged Debt Report"
-}
+  label: "Aged Debt Reporting"
 
+
+join: vw_ageddebt2_test {
+  view_label: "Aged Debt"
+  relationship: one_to_one
+  sql_on: ${vw_ageddebt2_test.id_inkey_in_cukey} = ${vw_ageddebt_new.customer_key}  ;;
+}
+}
 
 # # Select the views that should be a part of this model,
 # # and define the joins that connect them together.
