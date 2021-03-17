@@ -55,6 +55,7 @@ view: vw_ageddebt_new {
   dimension: name {
     type: string
     sql: ${TABLE}."NAME" ;;
+    drill_fields: [customer_key,outstanding_amount,unallocated_amt]
   }
 
   dimension: outstanding_amount {
