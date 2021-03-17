@@ -3,7 +3,7 @@ view: vw_ageddebt_new {
   sql_table_name: "CC"."VW_AGEDDEBT_NEW"
     ;;
 
-  dimension: client_code {
+    dimension: client_code {
     type: string
     sql: ${TABLE}."CLIENT_CODE" ;;
   }
