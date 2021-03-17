@@ -115,5 +115,8 @@ view: vw_ageddebt_new {
     value_format_name: gbp
   }
 
-
+  measure: total_outstanding {
+    type: sum
+    sql: sum(${outstanding_amount}-${outstanding_credits}+${unallocated_amt} ;;
+  }
 }
