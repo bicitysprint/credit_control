@@ -34,6 +34,7 @@ view: vw_ageddebt_salecode_desc {
   }
 
   dimension: h_desc {
+    label: "Credit Controller"
     type: string
     sql: ${TABLE}."H_DESC" ;;
   }
