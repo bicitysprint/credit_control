@@ -17,6 +17,7 @@ view: vw_ageddebt_new {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
+    drill_fields: [customer_key]
   }
 
   dimension: journal_amount {
