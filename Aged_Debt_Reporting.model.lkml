@@ -32,6 +32,15 @@ join: vw_ageddebt2_test {
   relationship: one_to_one
   sql_on: ${vw_ageddebt2_test.id_inkey_in_cukey} = ${vw_ageddebt_new.customer_key}  ;;
 }
+
+  join: vw_ageddebt_salecode_desc {
+    view_label: "Sale Codes"
+    relationship: one_to_one
+    sql_on: ${vw_ageddebt_salecode_desc.cust_key} = ${vw_ageddebt_new.customer_key}  ;;
+  }
+
+
+
 }
 
 # # Select the views that should be a part of this model,
