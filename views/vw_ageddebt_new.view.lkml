@@ -19,7 +19,7 @@ view: vw_ageddebt_new {
     sql: ${TABLE}."CUSTOMER_KEY" ;;
     link: {
     label: "Drill Dashboard"
-    url: "https://reporting.citysprint.co.uk/dashboards-next/1006?Customer_Key={{ value }}={{ _filters['vw_ageddebt2_test.customer_key'] | url_encode }}"
+    url: "/dashboards-next/1006?Customer_Key={{ value }}={{ _filters['vw_ageddebt2_test.customer_key'] | url_encode }}"
   }
     }
 ##    drill_fields: [customer_key]
