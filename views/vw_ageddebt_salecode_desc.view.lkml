@@ -13,6 +13,11 @@ view: vw_ageddebt_salecode_desc {
     sql: ${TABLE}."CUST_KEY" ;;
   }
 
+  dimension: d_desc {
+    type: string
+    sql: ${TABLE}."D_DESC" ;;
+  }
+
   dimension: e_desc {
     type: string
     sql: ${TABLE}."E_DESC" ;;
@@ -36,6 +41,11 @@ view: vw_ageddebt_salecode_desc {
   dimension: sales_code_c {
     type: string
     sql: ${TABLE}."SALES_CODE_C" ;;
+  }
+
+  dimension: sales_code_d {
+    type: string
+    sql: ${TABLE}."SALES_CODE_D" ;;
   }
 
   dimension: sales_code_e {
