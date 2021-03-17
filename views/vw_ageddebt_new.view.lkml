@@ -17,8 +17,12 @@ view: vw_ageddebt_new {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
-    drill_fields: [customer_key]
+    link: {
+    url: "https://reporting.citysprint.co.uk/dashboards-next/1006?State={{ value }}&Age={{ _filters['customer_key'] | url_encode }}"
   }
+    }
+##    drill_fields: [customer_key]
+
 
   dimension: journal_amount {
     type: number
