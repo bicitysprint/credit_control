@@ -17,7 +17,7 @@ view: vw_ageddebt_new {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
-    drill_fields: [customer_key,last_receipt_amount,last_receipt_date,outstanding_amount]
+    drill_fields: [customer_key]
   }
 
   dimension: journal_amount {
