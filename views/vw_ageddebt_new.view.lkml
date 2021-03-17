@@ -18,8 +18,9 @@ view: vw_ageddebt_new {
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
     link: {
-    label: "Aged Debt Detail"
-    url: "/dashboards-next/1006?Customer_Key={{ value }}={{ _filters['vw_ageddebt2_test.customer_key'] | url_encode }}"
+    label: "See Aged Debt Detail"
+    url: "/dashboards-next/1006?Customer_Key={{ value }}"
+      icon_url: "https://looker.com/favicon.ico"
   }
     }
 ##    drill_fields: [customer_key]
