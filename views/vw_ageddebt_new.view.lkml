@@ -13,11 +13,6 @@ view: vw_ageddebt_new {
     sql: ${TABLE}."CONSOL_CODE" ;;
   }
 
-  dimension: current_flag {
-    type: string
-    sql: ${TABLE}."CURRENT_FLAG" ;;
-  }
-
   dimension: customer_key {
     primary_key: yes
     type: string

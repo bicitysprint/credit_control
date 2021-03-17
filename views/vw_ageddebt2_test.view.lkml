@@ -46,6 +46,11 @@ view: vw_ageddebt2_test {
     value_format_name: gbp
   }
 
+  dimension: current_flag {
+    type: string
+    sql: ${TABLE}."CURRENT_FLAG" ;;
+  }
+
   dimension: cust_email {
     type: string
     sql: ${TABLE}."CUST_EMAIL" ;;
