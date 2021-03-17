@@ -117,6 +117,6 @@ view: vw_ageddebt_new {
 
   measure: total_outstanding {
     type: sum
-    sql: sum(${outstanding_amount}-${outstanding_credits}+${unallocated_amt} ;;
+    sql: ${outstanding_amount}-${outstanding_credits}+${unallocated_amt} ;;
   }
 }
