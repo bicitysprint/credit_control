@@ -18,7 +18,7 @@ view: vw_ageddebt_new {
     type: string
     sql: ${TABLE}."CUSTOMER_KEY" ;;
     link: {
-    label: "Drill Dashboard"
+    label: "Aged Debt Detail"
     url: "/dashboards-next/1006?Customer_Key={{ value }}={{ _filters['vw_ageddebt2_test.customer_key'] | url_encode }}"
   }
     }
