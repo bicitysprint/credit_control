@@ -186,7 +186,7 @@ view: vw_ageddebt2_test {
 
   measure: max_aged_days  {
     label: "Oldest Debt (Days)"
-    description: "Oldest outstanding debt in days. Negative days indicate that oldest debt is still within terms"
+    description: "Oldest outstanding debt in days. Negative days indicate that oldest debt is still within terms. This includes unallocated amounts."
     type: max
     sql: ${true_aged_days} ;;
   }
