@@ -112,28 +112,28 @@ view: vw_ageddebt2_test {
   }
 
   dimension: period1 {
-    label: "0-30 Days"
+    label: "P1 0-30 Days"
     type: number
     sql: ${TABLE}."PERIOD1" ;;
     value_format_name: gbp
   }
 
   dimension: period2 {
-    label: "31-60 Days"
+    label: "P2 31-60 Days"
     type: number
     sql: ${TABLE}."PERIOD2" ;;
     value_format_name: gbp
   }
 
   dimension: period3 {
-    label: "61-90 Days"
+    label: "P3 61-90 Days"
     type: number
     sql: ${TABLE}."PERIOD3" ;;
     value_format_name: gbp
   }
 
   dimension: period4 {
-    label: "Older Than 90 Days"
+    label: "P4 Over 90 Days"
     type: number
     sql: ${TABLE}."PERIOD4" ;;
     value_format_name: gbp
