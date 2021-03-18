@@ -37,6 +37,11 @@ view: vw_ageddebt_salecode_desc {
     label: "Credit Controller"
     type: string
     sql: ${TABLE}."H_DESC" ;;
+    link: {
+      label: "See Credit Controller Detail"
+      url: "/dashboards-next/1011?Credit+Controller={{ value }}"
+      icon_url: "https://looker.com/favicon.ico"
+    }
     drill_fields: [h_desc]
   }
 
