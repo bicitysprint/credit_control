@@ -180,6 +180,11 @@ view: vw_ageddebt2_test {
     drill_fields: [name]
   }
 
+  measure: max_aged_days  {
+    type: max
+    sql: ${true_aged_days} ;;
+  }
+
   measure: total_outstanding {
     type: sum_distinct
     sql_distinct_key: ${id_inkey_in_cukey} ;;
