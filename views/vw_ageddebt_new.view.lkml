@@ -84,8 +84,11 @@ view: vw_ageddebt_new {
   }
 
   dimension: terms {
-    type: number
-    sql: ${TABLE}."TERMS" ;;
+    type: string
+    sql:  case
+    when ${TABLE}."TERMS" = '0' then '30'
+    else ${TABLE}."TERMS"
+    end  ;;
   }
 
   dimension: year_number {
