@@ -83,6 +83,11 @@ view: vw_ageddebt_new {
     value_format_name: gbp
   }
 
+  dimension: terms {
+    type: number
+    sql: ${TABLE}."TERMS" ;;
+  }
+
   dimension: year_number {
     type: number
     sql: ${TABLE}."YEAR_NUMBER" ;;
