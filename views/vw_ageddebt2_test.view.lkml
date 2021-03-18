@@ -40,7 +40,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: current_ {
-    label: "Current_Period"
+    label: "Current/In Terms"
     type: number
     sql: ${TABLE}."CURRENT_" ;;
     value_format_name: gbp
@@ -112,24 +112,28 @@ view: vw_ageddebt2_test {
   }
 
   dimension: period1 {
+    label: "0-30 Days"
     type: number
     sql: ${TABLE}."PERIOD1" ;;
     value_format_name: gbp
   }
 
   dimension: period2 {
+    label: "31-60 Days"
     type: number
     sql: ${TABLE}."PERIOD2" ;;
     value_format_name: gbp
   }
 
   dimension: period3 {
+    label: "61-90 Days"
     type: number
     sql: ${TABLE}."PERIOD3" ;;
     value_format_name: gbp
   }
 
   dimension: period4 {
+    label: "Older Than 90 Days"
     type: number
     sql: ${TABLE}."PERIOD4" ;;
     value_format_name: gbp
@@ -181,7 +185,7 @@ view: vw_ageddebt2_test {
   }
 
   measure: max_aged_days  {
-    label: "Oldest Outstanding Debt"
+    label: "Oldest Debt"
     type: max
     sql: ${true_aged_days} ;;
   }
