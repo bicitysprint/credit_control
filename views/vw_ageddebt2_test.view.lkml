@@ -181,6 +181,7 @@ view: vw_ageddebt2_test {
   }
 
   measure: max_aged_days  {
+    label: "Oldest Debt Age"
     type: max
     sql: ${true_aged_days} ;;
   }
