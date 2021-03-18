@@ -84,7 +84,7 @@ view: vw_ageddebt_new {
   }
 
   dimension: terms {
-    type: string
+    type: number
     sql:  case
     when ${TABLE}."TERMS" = '0' then '30'
     else ${TABLE}."TERMS"
