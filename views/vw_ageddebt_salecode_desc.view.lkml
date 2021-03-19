@@ -11,6 +11,11 @@ view: vw_ageddebt_salecode_desc {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
+    link: {
+      label: "See Customer Debt Detail"
+      url: "/dashboards-next/1015?Credit+Controller={{ value }}"
+      icon_url: "https://looker.com/favicon.ico"
+    }
   }
 
   dimension: d_desc {
