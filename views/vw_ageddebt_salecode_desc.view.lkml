@@ -13,7 +13,7 @@ view: vw_ageddebt_salecode_desc {
     sql: ${TABLE}."CUST_KEY" ;;
     link: {
       label: "See Customer Debt Detail"
-      url: "/dashboards-next/1015?Customer_Key={{ value }}"
+      url: "/dashboards-next/1015?Cust_Key={{ value }}"
       icon_url: "https://looker.com/favicon.ico"
     }
   }
