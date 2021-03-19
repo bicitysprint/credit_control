@@ -112,7 +112,7 @@ view: vw_ageddebt2_test {
   }
 
   dimension: period1 {
-    label: "P1 0-30 Days"
+    label: "P1 1-30 Days"
     type: number
     sql: ${TABLE}."PERIOD1" ;;
     value_format_name: gbp
