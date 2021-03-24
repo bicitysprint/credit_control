@@ -109,6 +109,7 @@ view: vw_ageddebt2_test {
     type: number
     sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
     value_format_name: gbp
+    drill_fields: [outst_amt_fields*]
   }
 
   dimension: period1 {
@@ -198,5 +199,17 @@ view: vw_ageddebt2_test {
     value_format_name: gbp
     drill_fields: []
   }
+
+####################### DRILL SETS ###################
+
+  set: outst_amt_fields {
+    fields: [
+      id_inkey_in_cukey,
+      name,
+      terms,
+      invoice_no,
+      outstanding_amount
+    ]
+}
 
 }
