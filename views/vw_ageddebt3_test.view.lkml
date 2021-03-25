@@ -3,11 +3,11 @@ view: vw_ageddebt3_test {
   sql_table_name: "CC"."VW_AGEDDEBT3_TEST"
     ;;
 
-  dimension: amt_to_unallocated {
-    type: number
-    sql: ${TABLE}."AMT_TO_UNALLOCATED" ;;
-    value_format_name: gbp
-  }
+##  dimension: amt_to_unallocated {
+##    type: number
+##    sql: ${TABLE}."AMT_TO_UNALLOCATED" ;;
+##    value_format_name: gbp
+##  }
 
   dimension: brought_fwd_amt {
     type: number
@@ -42,12 +42,12 @@ view: vw_ageddebt3_test {
     sql: ${TABLE}."CUST_EMAIL" ;;
   }
 
-  dimension: final_unallocated_amt {
-    label: "Unallocated Amount"
-    type: number
-    sql: ${TABLE}."FINAL_UNALLOCATED_AMT" ;;
-    value_format_name: gbp
-  }
+##  dimension: final_unallocated_amt {
+##    label: "Unallocated Amount"
+##    type: number
+##    sql: ${TABLE}."FINAL_UNALLOCATED_AMT" ;;
+##    value_format_name: gbp
+##  }
 
   dimension: id_inkey_in_cukey {
     primary_key: yes
