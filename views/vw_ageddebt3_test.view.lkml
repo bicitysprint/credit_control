@@ -6,11 +6,13 @@ view: vw_ageddebt3_test {
   dimension: amt_to_unallocated {
     type: number
     sql: ${TABLE}."AMT_TO_UNALLOCATED" ;;
+    value_format_name: gbp
   }
 
   dimension: brought_fwd_amt {
     type: number
     sql: ${TABLE}."BROUGHT_FWD_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension: client_code {
@@ -24,8 +26,10 @@ view: vw_ageddebt3_test {
   }
 
   dimension: current_ {
+    label: "Current/In Terms"
     type: number
     sql: ${TABLE}."CURRENT_" ;;
+    value_format_name: gbp
   }
 
   dimension: current_flag {
@@ -41,6 +45,7 @@ view: vw_ageddebt3_test {
   dimension: final_unallocated_amt {
     type: number
     sql: ${TABLE}."FINAL_UNALLOCATED_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension: id_inkey_in_cukey {
@@ -52,6 +57,7 @@ view: vw_ageddebt3_test {
   dimension: last_recpt_amt {
     type: number
     sql: ${TABLE}."LAST_RECPT_AMT" ;;
+    value_format_name: gbp
   }
 
   dimension_group: last_recpt {
@@ -69,11 +75,13 @@ view: vw_ageddebt3_test {
   }
 
   dimension: name {
+    label: "Account_Name"
     type: string
     sql: ${TABLE}."NAME" ;;
   }
 
   dimension: oldest_debt_in_days {
+    description: "Oldest outstanding debt in days. Negative days indicate that oldest debt is still within terms. This includes unallocated amounts."
     type: number
     sql: ${TABLE}."OLDEST_DEBT_IN_DAYS" ;;
   }
@@ -81,31 +89,41 @@ view: vw_ageddebt3_test {
   dimension: outstanding_amount {
     type: number
     sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
+    value_format_name: gbp
   }
 
   dimension: outstanding_credit {
     type: number
     sql: ${TABLE}."OUTSTANDING_CREDIT" ;;
+    value_format_name: gbp
   }
 
   dimension: period1 {
+    label: "P1 1-30 Days"
     type: number
     sql: ${TABLE}."PERIOD1" ;;
+    value_format_name: gbp
   }
 
   dimension: period2 {
+    label: "P2 31-60 Days"
     type: number
     sql: ${TABLE}."PERIOD2" ;;
+    value_format_name: gbp
   }
 
   dimension: period3 {
+    label: "P3 61-90 Days"
     type: number
     sql: ${TABLE}."PERIOD3" ;;
+    value_format_name: gbp
   }
 
   dimension: period4 {
+    label: "P4 Over 90 Days"
     type: number
     sql: ${TABLE}."PERIOD4" ;;
+    value_format_name: gbp
   }
 
   dimension: status {
@@ -118,8 +136,14 @@ view: vw_ageddebt3_test {
     sql: ${TABLE}."TERMS" ;;
   }
 
+################ MEASURES ########################
+
   measure: count {
     type: count
     drill_fields: [name]
   }
+
+
+
+
 }
