@@ -50,6 +50,7 @@ view: vw_ageddebt3_test {
 
   dimension: id_inkey_in_cukey {
     primary_key: yes
+    label: "Customer_Key"
     type: string
     sql: ${TABLE}."ID_INKEY_IN_CUKEY" ;;
   }
