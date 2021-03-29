@@ -135,7 +135,7 @@ view: vw_ageddebt3_test {
   }
 
   dimension: terms {
-    type: string
+    type: number
     sql: ${TABLE}."TERMS" ;;
     value_format_name: decimal_0
   }
