@@ -19,6 +19,7 @@ view: vw_ageddebt_salecode_desc {
   }
 
   dimension: d_desc {
+    label: "Service Centre"
     type: string
     sql: ${TABLE}."D_DESC" ;;
   }
@@ -29,11 +30,13 @@ view: vw_ageddebt_salecode_desc {
   }
 
   dimension: f_desc {
+    label: "CCG"
     type: string
     sql: ${TABLE}."F_DESC" ;;
   }
 
   dimension: g_desc {
+    label: "Account Manager"
     type: string
     sql: ${TABLE}."G_DESC" ;;
   }
@@ -76,6 +79,7 @@ view: vw_ageddebt_salecode_desc {
   }
 
   dimension: sales_code_h {
+    label: "Credit Controller Code"
     type: string
     sql: ${TABLE}."SALES_CODE_H" ;;
   }
