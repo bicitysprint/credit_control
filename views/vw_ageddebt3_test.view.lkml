@@ -42,12 +42,12 @@ view: vw_ageddebt3_test {
     sql: ${TABLE}."CUST_EMAIL" ;;
   }
 
-##  dimension: final_unallocated_amt {
-##    label: "Unallocated Amount"
-##    type: number
-##    sql: ${TABLE}."FINAL_UNALLOCATED_AMT" ;;
-##    value_format_name: gbp
-##  }
+  dimension: final_unallocated {
+    label: "Unallocated Amount"
+    type: number
+    sql: ${TABLE}."FINAL_UNALLOCATED" ;;
+    value_format_name: gbp
+  }
 
   dimension: id_inkey_in_cukey {
     primary_key: yes
