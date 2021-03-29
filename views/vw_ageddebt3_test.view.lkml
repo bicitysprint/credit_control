@@ -86,6 +86,7 @@ view: vw_ageddebt3_test {
     description: "Oldest outstanding debt in days. Negative days indicate that oldest debt is still within terms. This would include unallocated amounts."
     type: number
     sql: ${TABLE}."OLDEST_DEBT_IN_DAYS" ;;
+    value_format_name: decimal_0
   }
 
   dimension: outstanding_amount {
