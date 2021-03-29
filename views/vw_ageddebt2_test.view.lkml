@@ -14,9 +14,8 @@ view: vw_ageddebt2_test {
   }
 
   dimension: cnotekey {
-    type: number
+    type: string
     sql: ${TABLE}."CNOTEKEY" ;;
-    value_format_name: decimal_0
   }
 
   dimension: consol_code {
