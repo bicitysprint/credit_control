@@ -32,13 +32,15 @@ view: vw_ageddebt_new {
     value_format_name: gbp
   }
 
-  dimension: last_receipt_amount {
+  dimension: last_recpt_amt {
+    label: "Last Receipt Amount"
     type: number
-    sql: ${TABLE}."LAST_RECEIPT_AMOUNT" ;;
+    sql: ${TABLE}."LAST_RECPT_AMT" ;;
     value_format_name: gbp
   }
 
-  dimension_group: last_receipt {
+  dimension_group: last_recpt {
+    label: "Last Receipt Date"
     type: time
     timeframes: [
       raw,
@@ -51,7 +53,7 @@ view: vw_ageddebt_new {
     ]
     convert_tz: no
     datatype: date
-    sql: ${TABLE}."LAST_RECEIPT_DATE" ;;
+    sql: ${TABLE}."LAST_RECPT_DATE" ;;
   }
 
   dimension: name {
