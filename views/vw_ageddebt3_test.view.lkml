@@ -54,6 +54,11 @@ view: vw_ageddebt3_test {
     label: "Customer_Key"
     type: string
     sql: ${TABLE}."ID_INKEY_IN_CUKEY" ;;
+    link: {
+      label: "See Aged Debt Detail"
+      url: "/dashboards-next/1006?Customer_Key={{ value }}"
+      icon_url: "https://looker.com/favicon.ico"
+    }
   }
 
   dimension: last_recpt_amt {
