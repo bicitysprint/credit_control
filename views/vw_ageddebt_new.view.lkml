@@ -68,9 +68,10 @@ view: vw_ageddebt_new {
     value_format_name: gbp
   }
 
-  dimension: outstanding_credits {
+  dimension: credit_amount {
+    label: "Outstanding Credits"
     type: number
-    sql: ${TABLE}."OUTSTANDING_CREDITS" ;;
+    sql: ${TABLE}."CREDIT_AMOUNT" ;;
     value_format_name: gbp
   }
 
@@ -124,7 +125,7 @@ view: vw_ageddebt_new {
   measure: sum_of_credits {
     type: sum_distinct
     sql_distinct_key: ${customer_key} ;;
-    sql: ${outstanding_credits} ;;
+    sql: ${credit_amount} ;;
     value_format_name: gbp
   }
 
