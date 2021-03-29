@@ -137,6 +137,7 @@ view: vw_ageddebt3_test {
   dimension: terms {
     type: string
     sql: ${TABLE}."TERMS" ;;
+    value_format_name: decimal_0
   }
 
 ################ MEASURES ########################
