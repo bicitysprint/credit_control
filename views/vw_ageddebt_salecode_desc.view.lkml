@@ -2,10 +2,10 @@ view: vw_ageddebt_salecode_desc {
   sql_table_name: "CC"."VW_AGEDDEBT_SALECODE_DESC"
     ;;
 
-##  dimension: c_desc {
-##    type: string
-##    sql: ${TABLE}."C_DESC" ;;
-##  }
+  dimension: c_desc {
+    type: string
+    sql: ${TABLE}."C_DESC" ;;
+  }
 
   dimension: cust_key {
     primary_key: yes
