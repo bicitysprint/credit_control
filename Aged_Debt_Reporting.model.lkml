@@ -45,12 +45,17 @@ join: vw_ageddebt2_test {
       sql_on: ${vw_ageddebt3_test.id_inkey_in_cukey} = ${vw_ageddebt_new.customer_key}  ;;
     }
 
-    join: vw_ageddebt_new_30032021 {
-    view_label: "New Aged Debt Base"
-    relationship: one_to_one
-    sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_new.customer_key}  ;;
-  }
+      join: vw_ageddebt_new_30032021 {
+        view_label: "New Aged Debt Base"
+        relationship: one_to_one
+        sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_new.customer_key}  ;;
+      }
 
+         join: vw_ageddebt3_30032021 {
+           view_label: "New Aged Debt Base"
+           relationship: one_to_one
+           sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt3_30032021.id_inkey_in_cukey}  ;;
+         }
 
 }
 
