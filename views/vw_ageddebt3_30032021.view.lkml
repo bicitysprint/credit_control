@@ -177,4 +177,17 @@ view: vw_ageddebt3_30032021 {
     type: count
     drill_fields: [name]
   }
+
+  measure: sum_p2 {
+    type: sum
+    sql: ${p2} ;;
+##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
+  }
+
+  measure: sum_p3 {
+    type: sum
+    sql: ${p3} ;;
+##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
+  }
+
 }
