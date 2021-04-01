@@ -97,4 +97,5 @@ view: vw_ageddebt_salecode_desc {
     type: count
     drill_fields: []
   }
+
 }
