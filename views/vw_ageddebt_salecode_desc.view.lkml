@@ -32,7 +32,10 @@ view: vw_ageddebt_salecode_desc {
   dimension: f_desc {
     label: "CCG"
     type: string
-    sql: ${TABLE}."F_DESC" ;;
+    sql: case
+    when ${TABLE}."F_DESC" = '501' then 'PEARL'
+    else ${TABLE}."F_DESC"
+    END ;;
   }
 
   dimension: g_desc {
