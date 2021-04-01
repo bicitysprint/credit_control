@@ -47,7 +47,7 @@ view: vw_ageddebt_salecode_desc {
     sql: case
     when ${TABLE}."H_DESC" = 'CUSTOMER DD ACCOUNTS' or "H_DESC" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
 /*    when ${TABLE}."Controller Name" = 'GAIL HAMEED' or "Controller Name" = 'GAIL HAMEED.' then 'GAIL HAMEED' */
-    when ${TABLE}."H_DESC" = 'GLYN COBB' or "Controller Name" = 'H_DESC' then 'GLYN COBB'
+    when ${TABLE}."H_DESC" = 'GLYN COBB' or "H_DESC" = 'GLYN COBB.' then 'GLYN COBB'
     when ${TABLE}."H_DESC" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
     else ${TABLE}."H_DESC"
     END ;;
