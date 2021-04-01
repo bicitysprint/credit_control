@@ -44,7 +44,13 @@ view: vw_ageddebt_salecode_desc {
   dimension: h_desc {
     label: "Credit Controller"
     type: string
-    sql: ${TABLE}."H_DESC" ;;
+    sql: case
+    when ${TABLE}."H_DESC" = 'CUSTOMER DD ACCOUNTS' or "H_DESC" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
+/*    when ${TABLE}."Controller Name" = 'GAIL HAMEED' or "Controller Name" = 'GAIL HAMEED.' then 'GAIL HAMEED' */
+    when ${TABLE}."H_DESC" = 'GLYN COBB' or "Controller Name" = 'H_DESC' then 'GLYN COBB'
+    when ${TABLE}."H_DESC" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
+    else ${TABLE}."H_DESC"
+    END ;;
     link: {
       label: "See Credit Controller Detail"
       url: "/dashboards-next/1011?Credit+Controller={{ value }}"
