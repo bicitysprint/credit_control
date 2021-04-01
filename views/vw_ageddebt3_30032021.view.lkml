@@ -179,13 +179,15 @@ view: vw_ageddebt3_30032021 {
   }
 
   measure: sum_p2 {
-    type: sum
+    type: sum_distinct
+    sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p2} ;;
 ##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
   }
 
   measure: sum_p3 {
-    type: sum
+    type: sum_distinct
+    sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p3} ;;
 ##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
   }
