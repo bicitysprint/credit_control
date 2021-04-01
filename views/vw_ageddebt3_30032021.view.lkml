@@ -204,6 +204,7 @@ view: vw_ageddebt3_30032021 {
     sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p1}+${p2}+${p3}+${p4}-${unallocated_amt} ;;
     value_format_name: gbp
+    drill_fields: [P1_P4_details*]
 
   }
 
