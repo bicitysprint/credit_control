@@ -229,5 +229,17 @@ view: vw_ageddebt3_30032021 {
     ]
   }
 
+  set: P1_P4_details {
+    fields: [
+      id_inkey_in_cukey,
+      name,
+      vw_ageddebt_salecode_desc.view.f_desc,
+      p1,
+      p2,
+      p3,
+      p4,
+      unallocated_amt,
+    ]
+  }
 
 }
