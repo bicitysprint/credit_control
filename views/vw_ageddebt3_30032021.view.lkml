@@ -195,6 +195,7 @@ view: vw_ageddebt3_30032021 {
     sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p3} ;;
     value_format_name: gbp
+    drill_fields: [P3_details*]
 ##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
   }
 
@@ -208,6 +209,15 @@ view: vw_ageddebt3_30032021 {
       vw_ageddebt_salecode_desc.view.f_desc,
       p2,
       ]
+  }
+
+  set: P3_details {
+    fields: [
+      id_inkey_in_cukey,
+      name,
+      vw_ageddebt_salecode_desc.view.f_desc,
+      p3,
+    ]
   }
 
 
