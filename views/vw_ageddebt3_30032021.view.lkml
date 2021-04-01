@@ -182,6 +182,7 @@ view: vw_ageddebt3_30032021 {
     type: sum_distinct
     sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p2} ;;
+    value_format_name: gbp
 ##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
   }
 
@@ -189,6 +190,7 @@ view: vw_ageddebt3_30032021 {
     type: sum_distinct
     sql_distinct_key: ${id_inkey_in_cukey} ;;
     sql: ${p3} ;;
+    value_format_name: gbp
 ##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
   }
 
