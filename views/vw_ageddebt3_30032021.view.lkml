@@ -74,7 +74,7 @@ view: vw_ageddebt3_30032021 {
     label: "Days Since Last Receipt"
     type: string
     sql: case
-          when ${TABLE}."DAYS_SINCE_RECEIPT" IS NULL then 'NOT RECORDED'
+          when ${TABLE}."DAYS_SINCE_RECEIPT" IS NULL then '0'
           else ${TABLE}."DAYS_SINCE_RECEIPT"
           END ;;
   }
@@ -85,7 +85,8 @@ view: vw_ageddebt3_30032021 {
           when ${days_since_receipt} >= '1' AND ${days_since_receipt} <= '34' then 'STANDARD'
           when ${days_since_receipt} >= '35' AND ${days_since_receipt} <= '45' then 'URGENT'
           when ${days_since_receipt} > '45' AND ${days_since_receipt} < '5500' then 'FINAL DEMAND'
-          else ${days_since_receipt}
+          when ${days_since_receipt} = '0' then 'UNKNOWN'
+          else NULL
           END ;;
   }
 
