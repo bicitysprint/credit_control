@@ -24,6 +24,16 @@ view: vw_ageddebt3_30032021 {
     sql: ${TABLE}."CONSOL_CODE" ;;
   }
 
+  dimension: credit_card_flag {
+    label: "Credit Card Flag (Y/N)"
+    type: string
+    sql: case
+         when ${TABLE}."CREDIT_CARD_FLAG" = 'F' then 'Y'
+         when ${TABLE}."CREDIT_CARD_FLAG" IS NULL then 'N'
+         else ${TABLE}."CREDIT_CARD_FLAG"
+         END ;;
+  }
+
   dimension: credcurrent {
     type: number
     sql: ${TABLE}."CREDCURRENT" ;;
