@@ -70,6 +70,27 @@ view: vw_ageddebt3_30032021 {
     sql: ${TABLE}."CUST_EMAIL" ;;
   }
 
+  dimension: days_since_receipt {
+    label: "Days Since Last Receipt"
+    type: string
+    sql: case
+          when ${TABLE}."DAYS_SINCE_RECEIPT" IS NULL then '0'
+          else ${TABLE}."DAYS_SINCE_RECEIPT"
+          END ;;
+  }
+
+  dimension: chase_status {
+    type: string
+    sql: case
+          when ${days_since_receipt} >= '1' AND ${days_since_receipt} <= '34' then 'STANDARD'
+          when ${days_since_receipt} >= '35' AND ${days_since_receipt} <= '45' then 'URGENT'
+          when ${days_since_receipt} > '45' AND ${days_since_receipt} < '5500' then 'FINAL DEMAND'
+          when ${days_since_receipt} = '0' then 'UNKNOWN'
+          else NULL
+          END ;;
+  }
+
+
   dimension: id_inkey_in_cukey {
     label: "Customer Key"
     primary_key: yes
