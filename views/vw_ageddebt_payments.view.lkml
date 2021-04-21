@@ -39,4 +39,33 @@ view: vw_ageddebt_payments {
     type: count
     drill_fields: []
   }
+
+  measure: sum_paymentperiod2 {
+    type: sum_distinct
+    sql_distinct_key: ${customer_key} ;;
+    sql: ${paymentperiod2} ;;
+    value_format_name: gbp
+##    drill_fields: [P2_details*]
+##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
+  }
+
+  measure: sum_paymentperiod3 {
+    type: sum_distinct
+    sql_distinct_key: ${customer_key} ;;
+    sql: ${paymentperiod3} ;;
+    value_format_name: gbp
+##    drill_fields: [P3_details*]
+##    drill_fields: [controller_name, archive_month, customer_key, customer_tier, sum_p2]
+  }
+
+  measure: sum_paymentperiods1_4 {
+    type: sum_distinct
+    sql_distinct_key: ${customer_key} ;;
+    sql: ${paymentperiod1}+${paymentperiod2}+${paymentperiod3}+${paymentperiod4} ;;
+    value_format_name: gbp
+##    drill_fields: [P1_P4_details*]
+
+  }
+
+
 }
