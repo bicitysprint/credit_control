@@ -63,6 +63,12 @@ join: vw_ageddebt2_test {
               sql_on: ${vw_ageddebt3_30032021.id_inkey_in_cukey} = ${vw_ageddebt_payments.customer_key}  ;;
            }
 
+               join: vw_ageddebt_targets {
+               view_label: "New Aged Debt Targets"
+               relationship: one_to_one
+               sql_on: ${vw_ageddebt_salecode_desc.sales_code_h} = ${vw_ageddebt_targets.sales_code_h}  ;;
+               }
+
 
 }
 
