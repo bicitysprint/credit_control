@@ -55,12 +55,37 @@ view: vw_ageddebt_targets {
     drill_fields: []
   }
 
+  measure: sum_of_p1 {
+    type: sum
+    sql: ${p1} ;;
+    value_format_name: gbp
+  }
+
   measure: sum_of_p2 {
     type: sum
     sql: ${p2} ;;
     value_format_name: gbp
   }
 
+  measure: sum_of_p3 {
+    type: sum
+    sql: ${p3} ;;
+    value_format_name: gbp
+  }
 
+  measure: sum_of_p4 {
+    type: sum
+    sql: ${p4} ;;
+    value_format_name: gbp
+  }
+
+  measure: sum_paymentperiods1_4 {
+    label: "Sum of P1-P4"
+    type: sum
+    sql: ${p1}+${p2}+${p3}+${p4} ;;
+    value_format_name: gbp
+##    drill_fields: [P1_P4_details*]
+
+  }
 
 }
