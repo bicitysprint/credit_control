@@ -7,7 +7,7 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."CCG" ;;
   }
 
-  dimension: h_desc {
+  dimension: controller_name {
     type: string
     sql: ${TABLE}."H_DESC" ;;
   }
