@@ -48,8 +48,19 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."YEAR_NUMBER" ;;
   }
 
+#######################################################
+
   measure: count {
     type: count
     drill_fields: []
   }
+
+  measure: sum_of_p2 {
+    type: sum
+    sql: ${p2} ;;
+    value_format_name: gbp
+  }
+
+
+
 }
