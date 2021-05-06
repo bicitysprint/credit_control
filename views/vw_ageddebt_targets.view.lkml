@@ -81,7 +81,8 @@ view: vw_ageddebt_targets {
 
   measure: sum_paymentperiods1_4 {
     label: "Sum of P1-P4"
-    type: sum
+    type: sum_distinct
+    sql_distinct_key: ${sales_code_h} ;;
     sql: ${p1}+${p2}+${p3}+${p4} ;;
     value_format_name: gbp
 ##    drill_fields: [P1_P4_details*]
