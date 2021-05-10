@@ -14,6 +14,12 @@ view: vw_ageddebt3_30032021 {
     value_format_name: gbp
   }
 
+  dimension: brought_fwd_amt2 {
+    type: number
+    sql: ${TABLE}."BROUGHT_FWD_AMT2" ;;
+    value_format_name: gbp
+  }
+
   dimension: client_code {
     type: string
     sql: ${TABLE}."CLIENT_CODE" ;;
@@ -68,6 +74,7 @@ view: vw_ageddebt3_30032021 {
   dimension: current_ {
     type: number
     sql: ${TABLE}."CURRENT_" ;;
+    value_format_name: gbp
   }
 
   dimension: current_flag {
@@ -166,21 +173,25 @@ view: vw_ageddebt3_30032021 {
   dimension: period1 {
     type: number
     sql: ${TABLE}."PERIOD1" ;;
+    value_format_name: gbp
   }
 
   dimension: period2 {
     type: number
     sql: ${TABLE}."PERIOD2" ;;
+    value_format_name: gbp
   }
 
   dimension: period3 {
     type: number
     sql: ${TABLE}."PERIOD3" ;;
+    value_format_name: gbp
   }
 
   dimension: period4 {
     type: number
     sql: ${TABLE}."PERIOD4" ;;
+    value_format_name: gbp
   }
 
   dimension: status {
