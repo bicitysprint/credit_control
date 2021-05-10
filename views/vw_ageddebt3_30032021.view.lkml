@@ -16,7 +16,7 @@ view: vw_ageddebt3_30032021 {
 
   dimension: brought_fwd_amt2 {
     type: number
-    sql: ${TABLE}."BROUGHT_FWD_AMT2" ;;
+    sql: ${TABLE}."BROUGHT_FWD_AMT_INV_ONLY" ;;
     value_format_name: gbp
   }
 
