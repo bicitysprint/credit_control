@@ -87,6 +87,11 @@ view: vw_ageddebt3_30032021 {
     sql: ${TABLE}."CUST_EMAIL" ;;
   }
 
+  dimension: cust_status {
+    type: string
+    sql: ${TABLE}."CUST_STATUS" ;;
+  }
+
   dimension: days_since_receipt {
     label: "Days Since Last Receipt"
     type: string
