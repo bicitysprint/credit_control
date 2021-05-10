@@ -32,6 +32,11 @@ view: vw_ageddebt_new_30032021 {
     sql: ${TABLE}."CUST_EMAIL" ;;
   }
 
+  dimension: cust_status {
+    type: string
+    sql: ${TABLE}."CUST_STATUS" ;;
+  }
+
   dimension: customer_key {
     primary_key: yes
     type: string
