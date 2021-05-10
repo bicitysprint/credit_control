@@ -106,6 +106,11 @@ view: vw_ageddebt_new_30032021 {
     sql: ${TABLE}."TERMS" ;;
   }
 
+##  dimension: test_amount2 {
+##    type: number
+##    sql: ${TABLE}."TEST_AMOUNT2" ;;
+##  }
+
   dimension: unallocated_amt {
     type: number
     sql: ${TABLE}."UNALLOCATED_AMT" ;;
