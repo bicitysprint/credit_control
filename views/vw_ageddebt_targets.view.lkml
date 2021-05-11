@@ -18,6 +18,7 @@ view: vw_ageddebt_targets {
   }
 
   dimension: cust_key {
+    primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
   }
@@ -53,7 +54,6 @@ view: vw_ageddebt_targets {
   }
 
   dimension: sales_code_h {
-    primary_key: yes
     type: string
     sql: ${TABLE}."SALES_CODE_H" ;;
   }
