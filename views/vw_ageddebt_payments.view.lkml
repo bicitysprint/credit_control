@@ -2,6 +2,16 @@ view: vw_ageddebt_payments {
   sql_table_name: "CC"."VW_AGEDDEBT_PAYMENTS"
     ;;
 
+  dimension: CCG  {
+    type: string
+    sql: ${TABLE}."CCG" ;;
+  }
+
+  dimension: controller_name {
+    type: string
+    sql: ${TABLE}."CONTROLLER_NAME" ;;
+  }
+
   dimension: customer_key {
     primary_key: yes
     type: string
