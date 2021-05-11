@@ -18,7 +18,7 @@ view: vw_ageddebt_payments {
     sql: ${TABLE}."CUSTOMER_KEY" ;;
   }
 
-  dimension_group: payment_date {
+  dimension_group: payment {
     type: time
     timeframes: [
       raw,
