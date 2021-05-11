@@ -82,15 +82,15 @@ view: vw_ageddebt_targets {
   }
 
   measure: sum_of_p2 {
-    type: sum ##_distinct
-##    sql_distinct_key: ${cust_key}
+    type: sum_distinct
+    sql_distinct_key: ${cust_key}
     sql: ${p2} ;;
     value_format_name: gbp
   }
 
   measure: sum_of_p3 {
-    type: sum ##_distinct
-##    sql_distinct_key: ${cust_key}
+    type: sum_distinct
+    sql_distinct_key: ${cust_key}
     sql: ${p3} ;;
     value_format_name: gbp
   }
