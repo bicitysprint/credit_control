@@ -9,7 +9,22 @@ view: vw_ageddebt_targets {
 
   dimension: controller_name {
     type: string
-    sql: ${TABLE}."H_DESC" ;;
+    sql: ${TABLE}."CONTROLLER_NAME" ;;
+  }
+
+  dimension: curr {
+    type: number
+    sql: ${TABLE}."CURR" ;;
+  }
+
+  dimension: cust_key {
+    type: string
+    sql: ${TABLE}."CUST_KEY" ;;
+  }
+
+  dimension: name {
+    type: string
+    sql: ${TABLE}."NAME" ;;
   }
 
   dimension: p1 {
