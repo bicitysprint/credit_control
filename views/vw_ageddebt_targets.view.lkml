@@ -99,6 +99,12 @@ view: vw_ageddebt_targets {
     value_format_name: gbp
   }
 
+  measure: sum_of_unallocated {
+    type: sum
+    sql: ${unallocated} ;;
+    value_format_name: gbp
+  }
+
   measure: sum_paymentperiods1_4 {
     label: "Sum of P1-P4"
     type: sum_distinct
