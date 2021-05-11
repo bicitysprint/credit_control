@@ -58,6 +58,11 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."SALES_CODE_H" ;;
   }
 
+  dimension: unallocated {
+    type: number
+    sql: ${TABLE}."UNALLOCATED" ;;
+  }
+
   dimension: year_number {
     type: number
     sql: ${TABLE}."YEAR_NUMBER" ;;
@@ -98,7 +103,7 @@ view: vw_ageddebt_targets {
     label: "Sum of P1-P4"
     type: sum_distinct
     sql_distinct_key: ${sales_code_h} ;;
-    sql: ${p1}+${p2}+${p3}+${p4} ;;
+    sql: ${p1}+${p2}+${p3}+${p4}+${unallocated} ;;
     value_format_name: gbp
 ##    drill_fields: [P1_P4_details*]
 
