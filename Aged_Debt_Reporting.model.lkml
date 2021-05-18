@@ -23,7 +23,7 @@ datagroup: credit_control_reporting_datagroup {
 
 persist_with: credit_control_reporting_datagroup
 
-explore: vw_ageddebt_new {
+explore: vw_ageddebt_new_30032021 {
   label: "Aged Debt Reporting"
 
 
@@ -45,11 +45,11 @@ explore: vw_ageddebt_new {
 ##      sql_on: ${vw_ageddebt3_test.id_inkey_in_cukey} = ${vw_ageddebt_new.customer_key}  ;;
 ##    }
 
-      join: vw_ageddebt_new_30032021 {
-        view_label: "New Aged Debt Base_v4"
-        relationship: one_to_one
-        sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_new.customer_key}  ;;
-      }
+##      join: vw_ageddebt_new_30032021 {
+##        view_label: "New Aged Debt Base_v4"
+##        relationship: one_to_one
+##        sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_new.customer_key}  ;;
+##      }
 
          join: vw_ageddebt3_30032021 {
            view_label: "New Aged Debt Report_v4"
@@ -60,7 +60,7 @@ explore: vw_ageddebt_new {
            join: vw_ageddebt_payments {
               view_label: "New Aged Debt Payments"
               relationship: one_to_one
-              sql_on: ${vw_ageddebt3_30032021.id_inkey_in_cukey} = ${vw_ageddebt_payments.customer_key}  ;;
+              sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_payments.customer_key}  ;;
            }
 
                join: vw_ageddebt_targets {
