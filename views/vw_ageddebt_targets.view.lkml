@@ -2,6 +2,11 @@ view: vw_ageddebt_targets {
   sql_table_name: "CC"."VW_AGEDDEBT_TARGETS"
     ;;
 
+  dimension: archive {
+    type: string
+    sql: ${TABLE}."ARCHIVE" ;;
+  }
+
   dimension: ccg {
     type: string
     sql: ${TABLE}."CCG" ;;
@@ -23,10 +28,10 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."CUST_KEY" ;;
   }
 
-  dimension: name {
-    type: string
-    sql: ${TABLE}."NAME" ;;
-  }
+#  dimension: name {
+#    type: string
+#    sql: ${TABLE}."NAME" ;;
+#  }
 
   dimension: p1 {
     type: number
@@ -48,11 +53,6 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."P4" ;;
   }
 
-  dimension: period_number {
-    type: number
-    sql: ${TABLE}."PERIOD_NUMBER" ;;
-  }
-
   dimension: sales_code_h {
     type: string
     sql: ${TABLE}."SALES_CODE_H" ;;
@@ -63,10 +63,6 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."UNALLOCATED" ;;
   }
 
-  dimension: year_number {
-    type: number
-    sql: ${TABLE}."YEAR_NUMBER" ;;
-  }
 
 #######################################################
 
