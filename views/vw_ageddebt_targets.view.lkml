@@ -71,13 +71,22 @@ view: vw_ageddebt_targets {
     drill_fields: []
   }
 
+  measure: sum_of_curr {
+    label: "P1_Target_Sum"
+    type: sum
+    sql: ${curr} ;;
+    value_format_name: gbp
+  }
+
   measure: sum_of_p1 {
+    label: "P2_Target_Sum"
     type: sum
     sql: ${p1} ;;
     value_format_name: gbp
   }
 
   measure: sum_of_p2 {
+    label: "P3_Target_Sum"
     type: sum ##_distinct
 ##    sql_distinct_key: ${cust_key}
     sql: ${p2} ;;
@@ -96,6 +105,14 @@ view: vw_ageddebt_targets {
     sql: ${p4} ;;
     value_format_name: gbp
   }
+
+  measure: sum_of_p3_plus_p4 {
+    label: "P4_Target_Sum"
+    type: sum
+    sql: ${p3}+${p4} ;;
+    value_format_name: gbp
+  }
+
 
   measure: sum_of_unallocated {
     type: sum
