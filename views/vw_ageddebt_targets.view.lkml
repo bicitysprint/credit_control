@@ -124,7 +124,7 @@ view: vw_ageddebt_targets {
     label: "Sum of P1-P4"
     type: sum_distinct
     sql_distinct_key: ${cust_key} ;;
-    sql: ${p1}+${p2}+${p3}+${p4} ;;
+    sql: ${curr}+${p1}+${p2}+${p3}+${p4} ;;
     value_format_name: gbp
 ##    drill_fields: [P1_P4_details*]
 
