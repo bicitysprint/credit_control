@@ -33,6 +33,8 @@ view: vw_ageddebt_targets {
 #    sql: ${TABLE}."NAME" ;;
 #  }
 
+#### ALL PERIODS USED HERE REFLECT FIGURES AS AT END OF PREVIOUS ARCHIVE, EG P1 FOR 210430 WILL BE P2 IN THE MONTH AFTER (COLLECTION)
+
   dimension: p1 {
     type: number
     sql: ${TABLE}."P1" ;;
