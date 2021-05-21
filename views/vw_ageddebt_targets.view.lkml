@@ -14,7 +14,12 @@ view: vw_ageddebt_targets {
 
   dimension: controller_name {
     type: string
-    sql: ${TABLE}."CONTROLLER_NAME" ;;
+    sql: case
+    when ${TABLE}."CONTROLLER_NAME" = 'CUSTOMER DD ACCOUNTS' or "CONTROLLER_NAME" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
+    when ${TABLE}."CONTROLLER_NAME" = 'GLYN COBB' or "CONTROLLER_NAME" = 'GLYN COBB.' then 'GLYN COBB'
+    when ${TABLE}."CONTROLLER_NAME" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
+    else ${TABLE}."CONTROLLER_NAME"
+    END ;;
   }
 
   dimension: curr {
