@@ -90,8 +90,8 @@ view: vw_ageddebt_targets {
 
   measure: sum_of_p2 {
     label: "P3_Target_Sum"
-    type: sum
-##    sql_distinct_key: ${cust_key} ;;
+    type: sum_distinct
+    sql_distinct_key: ${cust_key} ;;
     sql: ${p2} ;;
     value_format_name: gbp
   }
