@@ -125,9 +125,9 @@ view: vw_ageddebt_targets {
 
   measure: sum_paymentperiods1_4 {
     label: "Sum of P1-P4 less Unallocated"
-    type: sum_distinct
+    type: number
  ##   sql_distinct_key: ${cust_key} ;;
-    sql: ${curr}+${p1}+${p2}+${p3}+${p4}+${unallocated} ;;
+    sql: sum(distinct(${curr}))+sum(distinct(${p1}))+sum(distinct(${p2}))+sum(distinct(${p3}))+sum(distinct(${p4}))+sum(distinct(${unallocated})) ;;
     value_format_name: gbp
 ##    drill_fields: [P1_P4_details*]
 
