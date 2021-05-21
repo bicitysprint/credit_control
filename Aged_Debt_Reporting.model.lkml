@@ -36,7 +36,7 @@ explore: vw_ageddebt_new {
   join: vw_ageddebt_salecode_desc {
     view_label: "Sale Codes"
     relationship: one_to_one
-    sql_on: ${vw_ageddebt3_30032021.id_inkey_in_cukey} = ${vw_ageddebt_salecode_desc.cust_key}  ;;
+    sql_on: ${vw_ageddebt_new.customer_key} = ${vw_ageddebt_salecode_desc.cust_key}  ;;
   }
 
 ##    join: vw_ageddebt3_test {
