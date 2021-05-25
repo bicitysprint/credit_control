@@ -120,7 +120,7 @@ view: vw_ageddebt3_30032021 {
     sql: ${TABLE}."ID_INKEY_IN_CUKEY" ;;
     link: {
       label: "See Aged Debt Detail"
-      url: "/dashboards-next/1139?Customer_Key={{ value }}"
+      url: "/dashboards-next/1139?Customer%20Key={{ value }}"
       icon_url: "https://looker.com/favicon.ico"
     }
   }
