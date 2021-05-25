@@ -95,6 +95,7 @@ view: vw_ageddebt_new_30032021 {
   dimension: outstanding_amount {
     type: number
     sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
+    value_format_name: gbp
   }
 
   dimension: period_number {
