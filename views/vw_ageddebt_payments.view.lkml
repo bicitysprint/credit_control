@@ -8,6 +8,7 @@ view: vw_ageddebt_payments {
   }
 
   dimension: controller_name {
+    label: "Controller"
     type: string
     sql: ${TABLE}."CONTROLLER_NAME" ;;
   }
