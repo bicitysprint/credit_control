@@ -130,12 +130,19 @@ view: vw_ageddebt_new_30032021 {
 
 ######################################################
 
-  measure: sum {
+  measure: sum_amount {
     type: sum_distinct
     sql_distinct_key: ${TABLE}."ID_INKEY_IN_INVNO" ;;
     sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
     value_format_name: gbp
   }
+
+  measure: sum {
+    type: sum
+    sql: ${TABLE}."OUTSTANDING_AMOUNT" ;;
+    value_format_name: gbp
+  }
+
 
   measure: count {
     type: count
