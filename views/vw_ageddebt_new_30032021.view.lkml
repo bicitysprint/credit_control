@@ -1,4 +1,5 @@
 view: vw_ageddebt_new_30032021 {
+  view_label: "Aged Debt Report Details"
   sql_table_name: "CC"."VW_AGEDDEBT_NEW_30032021"
     ;;
 
