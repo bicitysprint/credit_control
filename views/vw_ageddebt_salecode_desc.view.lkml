@@ -13,7 +13,7 @@ view: vw_ageddebt_salecode_desc {
     sql: ${TABLE}."CUST_KEY" ;;
     link: {
       label: "See Customer Debt Detail"
-      url: "/dashboards-next/1015?Cust_Key={{ value }}"
+      url: "/dashboards-next/1139?Cust_Key={{ value }}"
       icon_url: "https://looker.com/favicon.ico"
     }
   }
@@ -55,11 +55,11 @@ view: vw_ageddebt_salecode_desc {
     when ${TABLE}."H_DESC" is null then 'N/A'
     else ${TABLE}."H_DESC"
     END ;;
-    link: {
-      label: "See Credit Controller Detail"
-      url: "/dashboards-next/1011?Credit+Controller={{ value }}"
-      icon_url: "https://looker.com/favicon.ico"
-    }
+##    link: {
+##      label: "See Credit Controller Detail"
+##      url: "/dashboards-next/1011?Credit+Controller={{ value }}"
+##      icon_url: "https://looker.com/favicon.ico"
+##    }
     drill_fields: [h_desc]
   }
 
