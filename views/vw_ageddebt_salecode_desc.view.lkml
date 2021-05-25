@@ -52,6 +52,7 @@ view: vw_ageddebt_salecode_desc {
     when ${TABLE}."H_DESC" = 'GAIL HAMEED' or "H_DESC" = 'GAIL HAMEED.' then 'GAIL HAMEED'
     when ${TABLE}."H_DESC" = 'GLYN COBB' or "H_DESC" = 'GLYN COBB.' then 'GLYN COBB'
     when ${TABLE}."H_DESC" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
+    when ${TABLE}."H_DESC" is null then 'N/A'
     else ${TABLE}."H_DESC"
     END ;;
     link: {
