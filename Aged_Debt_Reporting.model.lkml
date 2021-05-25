@@ -60,7 +60,7 @@ explore: vw_ageddebt_new_30032021 {
            join: vw_ageddebt_payments {
               view_label: "New Aged Debt Payments"
               relationship: one_to_one
-              sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_payments.customer_key}  ;;
+              sql_on: ${vw_ageddebt_new_30032021.customer_key} = ${vw_ageddebt_payments.customer_key} and ${vw_ageddebt_targets.controller_name} = ${vw_ageddebt_payments.controller_name} ;;
            }
 
                join: vw_ageddebt_targets {
