@@ -59,6 +59,12 @@ view: vw_ageddebt_payments {
     sql: ${TABLE}."PAYMENTPERIOD4" ;;
   }
 
+  dimension: transaction_key {
+    type: string
+    sql: ${TABLE}."TRANSACTION_KEY" ;;
+  }
+
+
 ################################# MEASURES #############################
 
   measure: count {
@@ -86,7 +92,7 @@ view: vw_ageddebt_payments {
 
   measure: sum_paymentperiods1_4 {
     type: sum_distinct
-    sql_distinct_key: ${controller_name} ;;
+    sql_distinct_key: ${transaction_key} ;;
     sql: ${paymentperiod1}+${paymentperiod2}+${paymentperiod3}+${paymentperiod4} ;;
     value_format_name: gbp
 ##    drill_fields: [P1_P4_details*]
