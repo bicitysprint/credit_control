@@ -66,9 +66,10 @@ explore: vw_ageddebt_new_30032021 {
                join: vw_ageddebt_targets {
                view_label: "New Aged Debt Targets"
                relationship: one_to_one
-               sql_on: ${vw_ageddebt_salecode_desc.sales_code_h} = ${vw_ageddebt_targets.sales_code_h} and ${vw_ageddebt_salecode_desc.cust_key} = ${vw_ageddebt_targets.cust_key}  ;;
+               sql_on: ${vw_ageddebt_salecode_desc.sales_code_h} = ${vw_ageddebt_targets.sales_code_h}  ;;
               }
 
+## and ${vw_ageddebt_salecode_desc.cust_key} = ${vw_ageddebt_targets.cust_key}
 
 }
 
