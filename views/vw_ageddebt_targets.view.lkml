@@ -92,7 +92,7 @@ view: vw_ageddebt_targets {
     sql_distinct_key: ${cust_key} ;;
     sql: ${p1} ;;
     value_format_name: gbp
-    drill_fields: [cust_key,ccg,controller_name,p2]
+    drill_fields: [cust_key,ccg,p2]
   }
 
   measure: sum_of_p2 {
