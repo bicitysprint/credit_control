@@ -53,6 +53,8 @@ view: vw_ageddebt_current {
     sql: ${TABLE}."UNALLOCATED" ;;
   }
 
+############################################ MEASURES ##########################################
+
   measure: count {
     type: count
     drill_fields: [controller_name, name]
