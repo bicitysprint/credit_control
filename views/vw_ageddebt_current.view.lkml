@@ -64,8 +64,11 @@ view: vw_ageddebt_current {
   }
 
   measure: sum_of_P2 {
-    type: sum
+    label: "P2_Current_Sum"
+    type: sum_distinct
+    sql_distinct_key: ${cust_key} ;;
     sql: ${TABLE}."P2" ;;
+    value_format_name: gbp
   }
 
 
