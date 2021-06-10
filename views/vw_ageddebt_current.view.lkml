@@ -59,4 +59,11 @@ view: vw_ageddebt_current {
     type: count
     drill_fields: [controller_name, name]
   }
+
+  measure: sum_of_P2 {
+    type: sum
+    sql: ${TABLE}."P2" ;;
+  }
+
+
 }
