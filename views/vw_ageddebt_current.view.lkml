@@ -4,7 +4,10 @@ view: vw_ageddebt_current {
 
   dimension: controller_name {
     type: string
-    sql: ${TABLE}."CONTROLLER_NAME" ;;
+    sql: case
+    when ${TABLE}."CONTROLLER_NAME" = 'CUSTOMER DD ACCOUNTS' or "CONTROLLER _NAME" = 'CUSTOMER DD ACCS' then 'CUSTOMER DD ACCOUNTS'
+    else ${TABLE}."CONTROLLER_NAME"
+    END  ;;
   }
 
   dimension: curr {
