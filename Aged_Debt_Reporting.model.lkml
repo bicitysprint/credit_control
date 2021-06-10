@@ -72,7 +72,7 @@ explore: vw_ageddebt_new_30032021 {
                   join: vw_ageddebt_current {
                   view_label: "New Aged Debt Current"
                   relationship: one_to_one
-                  sql_on: ${vw_ageddebt_salecode_desc.sales_code_h} = ${vw_ageddebt_current.sales_code_h} ;;
+                  sql_on: ${vw_ageddebt_salecode_desc.sales_code_h} = ${vw_ageddebt_current.sales_code_h} and ${vw_ageddebt_salecode_desc.cust_key} = ${vw_ageddebt_current.cust_key} ;;
                   }
 
 
