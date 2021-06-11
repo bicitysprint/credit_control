@@ -36,7 +36,7 @@ view: vw_ageddebt_targets {
 
   dimension: cust_archive_key  {
     type: string
-    sql: concat(${cust_key}, ${archive}) ;;
+    sql: concat(${cust_key},"-" ${archive}) ;;
   }
 
 
