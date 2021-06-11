@@ -96,7 +96,7 @@ view: vw_ageddebt_targets {
     label: "P2_Target_Sum"
 ##    type: sum
    type: sum_distinct
-    sql_distinct_key: ${cust_key} ;;
+    sql_distinct_key: ${cust_archive_key} ;;
     sql: ${p1} ;;
     value_format_name: gbp
 ##    drill_fields: [cust_key,ccg,p2]
@@ -105,7 +105,7 @@ view: vw_ageddebt_targets {
   measure: sum_of_p2 {
     label: "P3_Target_Sum"
     type: sum_distinct
-    sql_distinct_key: ${cust_key} ;;
+    sql_distinct_key: ${cust_archive_key} ;;
     sql: ${p2} ;;
     value_format_name: gbp
   }
