@@ -63,6 +63,14 @@ view: vw_ageddebt_current {
     drill_fields: [controller_name, name]
   }
 
+  measure: sum_of_P1 {
+    label: "P1_Current_Sum"
+    type: sum_distinct
+    sql_distinct_key: ${cust_key} ;;
+    sql: ${TABLE}."P1" ;;
+    value_format_name: gbp
+  }
+
   measure: sum_of_P2 {
     label: "P2_Current_Sum"
     type: sum_distinct
@@ -76,6 +84,22 @@ view: vw_ageddebt_current {
     type: sum_distinct
     sql_distinct_key: ${cust_key} ;;
     sql: ${TABLE}."P3" ;;
+    value_format_name: gbp
+  }
+
+  measure: sum_of_P4 {
+    label: "P4_Current_Sum"
+    type: sum_distinct
+    sql_distinct_key: ${cust_key} ;;
+    sql: ${TABLE}."P4" ;;
+    value_format_name: gbp
+  }
+
+  measure: sum_of_unallocated {
+    label: "Current_Sum"
+    type: sum_distinct
+    sql_distinct_key: ${cust_key} ;;
+    sql: ${TABLE}."UNALLOCATED" ;;
     value_format_name: gbp
   }
 
