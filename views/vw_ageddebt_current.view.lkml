@@ -96,7 +96,7 @@ view: vw_ageddebt_current {
   }
 
   measure: sum_of_unallocated {
-    label: "Current_Sum"
+    label: "Unallocated_Sum"
     type: sum_distinct
     sql_distinct_key: ${cust_key} ;;
     sql: ${TABLE}."UNALLOCATED" ;;
