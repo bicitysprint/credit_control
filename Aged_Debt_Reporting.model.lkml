@@ -24,7 +24,7 @@ datagroup: credit_control_reporting_datagroup {
 persist_with: credit_control_reporting_datagroup
 
 explore: vw_ageddebt_new_30032021 {
-  label: "Aged Debt Reporting"
+  label: "Aged Debt Report Details"
 
 
 ##join: vw_ageddebt2_test {
