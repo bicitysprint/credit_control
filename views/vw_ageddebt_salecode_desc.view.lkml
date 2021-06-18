@@ -53,6 +53,7 @@ view: vw_ageddebt_salecode_desc {
     when ${TABLE}."H_DESC" = 'GLYN COBB' or "H_DESC" = 'GLYN COBB.' then 'GLYN COBB'
     when ${TABLE}."H_DESC" = 'PRIMROSE ARTHURS' then 'PRIMROSE ARTHURS-WOOD'
     when ${TABLE}."H_DESC" is null or "H_DESC" = 'NOT APPLICABLE' then 'N/A'
+    when ${TABLE}."H_DESC" = 'PETE TREVILLION' then 'CUSTOMER ACCOUNTS'
     else ${TABLE}."H_DESC"
     END ;;
 ##    link: {
