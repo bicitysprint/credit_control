@@ -48,11 +48,13 @@ view: vw_ageddebt_targets {
 #### ALL PERIODS USED HERE REFLECT FIGURES AS AT END OF PREVIOUS ARCHIVE, EG P1 FOR 210430 WILL BE P2 IN THE MONTH AFTER (COLLECTION)
 
   dimension: p1 {
+    label: "P2 Debt Amount"
     type: number
     sql: ${TABLE}."P1" ;;
   }
 
   dimension: p2 {
+    label: "P3 Debt Amount"
     type: number
     sql: ${TABLE}."P2" ;;
   }
