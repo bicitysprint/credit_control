@@ -148,6 +148,16 @@ view: vw_ageddebt_targets {
 
   }
 
+############################## DRILL SETS ##################################
+
+  set: P2_details {
+    fields: [
+      cust_key,
+      ccg,
+      vw_ageddebt_salecode_desc.view.f_desc,
+      p2,
+    ]
+  }
 
 
 
