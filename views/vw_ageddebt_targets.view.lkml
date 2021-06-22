@@ -152,7 +152,7 @@ view: vw_ageddebt_targets {
 
   set: P2_Target_details {
     fields: [
-      cust_key,
+      cust_archive_key,
       ccg,
       p1
     ]
