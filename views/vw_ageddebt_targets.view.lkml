@@ -155,7 +155,7 @@ view: vw_ageddebt_targets {
       cust_key,
       ccg,
       vw_ageddebt_salecode_desc.view.f_desc,
-      p2,
+      p1,
     ]
   }
 
