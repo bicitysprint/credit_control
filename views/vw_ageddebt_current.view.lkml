@@ -111,4 +111,15 @@ view: vw_ageddebt_current {
     value_format_name: gbp
   }
 
+############################### DRILL SETS #########################################
+
+set: P2_Current_Sum {
+  fields: [
+    cust_key,
+    name,
+    p2
+  ]
+}
+
+
 }
