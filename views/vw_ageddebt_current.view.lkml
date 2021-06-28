@@ -106,7 +106,7 @@ view: vw_ageddebt_current {
   }
 
   measure: sum_coll_periods1_4 {
-    label: "Sum of P1-P4 Current less Unallocated"
+    label: "Sum of P1-P4 less Unallocated"
     type: sum_distinct
     sql_distinct_key: ${cust_key} ;;
     sql: ${p1}+${p2}+${p3}+${p4}+${unallocated} ;;
