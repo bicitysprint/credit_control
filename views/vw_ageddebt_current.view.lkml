@@ -111,6 +111,7 @@ view: vw_ageddebt_current {
     sql_distinct_key: ${cust_key} ;;
     sql: ${p1}+${p2}+${p3}+${p4}+${unallocated} ;;
     value_format_name: gbp
+    drill_fields: [P1-P4_Less_Unalloc_Sum*]
   }
 
 ############################### DRILL SETS #########################################
