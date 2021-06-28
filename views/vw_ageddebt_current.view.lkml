@@ -131,6 +131,17 @@ set: P2_Current_Sum {
     ]
   }
 
+  set: P1-P4_Less_Unalloc_Sum {
+    fields: [
+      cust_key,
+      name,
+      p1,
+      p2,
+      p3,
+      p4,
+      unallocated
+    ]
+  }
 
 
 }
