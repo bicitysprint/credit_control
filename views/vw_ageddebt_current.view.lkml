@@ -86,6 +86,7 @@ view: vw_ageddebt_current {
     sql_distinct_key: ${cust_key} ;;
     sql: ${TABLE}."P3" ;;
     value_format_name: gbp
+    drill_fields: [P3_Current_Sum*]
   }
 
   measure: sum_of_P4 {
@@ -121,6 +122,15 @@ set: P2_Current_Sum {
     p2
   ]
 }
+
+  set: P3_Current_Sum {
+    fields: [
+      cust_key,
+      name,
+      p3
+    ]
+  }
+
 
 
 }
