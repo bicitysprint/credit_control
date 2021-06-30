@@ -7,6 +7,11 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."ARCHIVE" ;;
   }
 
+  dimension: archive_date {
+    type: date
+    sql: to_date(to_char(to_decimal(${TABLE}."ARCHIVE")), 'yymmdd') ;;
+  }
+
   dimension: ccg {
     type: string
     sql: ${TABLE}."CCG" ;;
