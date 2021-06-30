@@ -25,6 +25,11 @@ persist_with: credit_control_reporting_datagroup
 
 explore: vw_ageddebt_new_30032021 {
   label: "Aged Debt Report Details"
+  access_filter: {
+    field: vw_ageddebt_salecode_desc.h_desc
+    user_attribute: name_filter
+  }
+
 
 
 ##join: vw_ageddebt2_test {
