@@ -158,6 +158,7 @@ view: vw_ageddebt_targets {
     sql: ${curr}+${p1}+${p2}+${p3}+${p4}+${unallocated} ;;
 ##    sql: sum(distinct(${curr}))+sum(distinct(${p1}))+sum(distinct(${p2}))+sum(distinct(${p3}))+sum(distinct(${p4}))+sum(distinct(${unallocated})) ;;
     value_format_name: gbp
+    drill_fields: [P1-P4_Less_Unalloc_Sum*]
 ##    drill_fields: [P1_P4_details*]
 
   }
@@ -177,5 +178,18 @@ view: vw_ageddebt_targets {
       p2
     ]
   }
+
+
+  set: P1-P4_Less_Unalloc_Sum {
+    fields: [
+      cust_key,
+      p1,
+      p2,
+      p3,
+      p4,
+      unallocated
+    ]
+  }
+
 
 }
