@@ -95,6 +95,11 @@ view: vw_ageddebt_targets {
     sql: ${TABLE}."UNALLOCATED" ;;
   }
 
+  dimension: total_periods {
+    type: number
+    sql: ${TABLE}."CURR" + ${TABLE}."P1" + ${TABLE}."P2" + ${TABLE}."P4_true" + ${TABLE}."UNALLOCATED" ;;
+  }
+
 
 #######################################################
 
