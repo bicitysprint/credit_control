@@ -170,6 +170,11 @@ view: vw_ageddebt_targets {
     ]
   }
 
-
+  set: P3_Target_details {
+    fields: [
+      cust_key,
+      p2
+    ]
+  }
 
 }
