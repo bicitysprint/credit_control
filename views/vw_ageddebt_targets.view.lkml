@@ -29,6 +29,7 @@ view: vw_ageddebt_targets {
   }
 
   dimension: curr {
+    label: "P1 Debt Amount"
     type: number
     sql: ${TABLE}."CURR" ;;
   }
@@ -77,6 +78,11 @@ view: vw_ageddebt_targets {
   dimension: p4 {
     type: number
     sql: ${TABLE}."P4" ;;
+  }
+
+  dimension: p4_true {
+    label: "P4 Debt Amount"
+    sql: ${TABLE}."P3" + ${TABLE}."P4" ;;
   }
 
   dimension: sales_code_h {
@@ -183,10 +189,10 @@ view: vw_ageddebt_targets {
   set: P1-P4_Less_Unalloc_Sum {
     fields: [
       cust_key,
+      curr,
       p1,
       p2,
-      p3,
-      p4,
+      p4_true,
       unallocated
     ]
   }
