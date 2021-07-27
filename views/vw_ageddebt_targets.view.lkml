@@ -120,6 +120,7 @@ view: vw_ageddebt_targets {
     sql_distinct_key: ${cust_archive_key} ;;
     sql: ${p2} ;;
     value_format_name: gbp
+    drill_fields: [P3_Target_details*]
   }
 
   measure: sum_of_p3 {
