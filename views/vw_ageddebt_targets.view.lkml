@@ -38,11 +38,11 @@ view: vw_ageddebt_targets {
     primary_key: yes
     type: string
     sql: ${TABLE}."CUST_KEY" ;;
-    link: {
-      label: "See Aged Debt Detail"
-      url: "/dashboards-next/1187?Customer%20Key={{ value }}"
-      icon_url: "https://looker.com/favicon.ico"
-    }
+##    link: {
+##      label: "See Aged Debt Detail"
+##      url: "/dashboards-next/1187?Customer%20Key={{ value }}"
+##      icon_url: "https://looker.com/favicon.ico"
+##    }
   }
 
   dimension: cust_archive_key  {
