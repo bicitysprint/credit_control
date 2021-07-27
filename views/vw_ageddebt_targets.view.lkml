@@ -166,9 +166,6 @@ view: vw_ageddebt_targets {
   set: P2_Target_details {
     fields: [
       cust_key,
-      vw_ageddebt3_30032021.view.name,
-      vw_ageddebt_new_30032021.view.id_inkey_in_invno,
-      vw_ageddebt_new_30032021.view.invoice_date,
       p1
     ]
   }
